@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="notebooks.html" />
+    <link rel="prev" title="Welcome to Project Sains Data" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -395,21 +395,21 @@ Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-package
 Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
 Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 12)) (1.1.1)
 Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 13)) (2.4.2)
-Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (21.4.0)
 Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.1)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.4)
-Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.4)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (21.4.0)
 Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.2)
+Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.4)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.4)
 Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;-r requirements.txt (line 2)) (4.3.0)
 Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;-r requirements.txt (line 6)) (8.4.0)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
 Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.7.1)
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
 Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
 Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;-r requirements.txt (line 12)) (5.10.2)
 Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.25.1)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (1.26.14)
 Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (1.26.14)
 Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;-r requirements.txt (line 12)) (3.13.0)
 Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
@@ -421,8 +421,8 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packag
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=1e5095bd67d01d03543f5de4b510daa9749ab9f21d0790ed11c24bd5fe2d5457
-  Stored in directory: /tmp/pip-ephem-wheel-cache-42dt7x27/wheels/20/e1/2d/7f29314c8c0e321c6f657dd9646e875153f3ea8481209ac26f
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=e69f43ecf694d6751fbb5429bad3b9d15bc78c68de7fe70ca4efacfd794d2b62
+  Stored in directory: /tmp/pip-ephem-wheel-cache-azmlrbhz/wheels/20/e1/2d/7f29314c8c0e321c6f657dd9646e875153f3ea8481209ac26f
 Successfully built twint
 </pre></div>
 </div>
@@ -431,9 +431,7 @@ Successfully built twint
     Found existing installation: twint 2.1.21
     Uninstalling twint-2.1.21:
       Successfully uninstalled twint-2.1.21
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed twint-2.1.21
+Successfully installed twint-2.1.21
 </pre></div>
 </div>
 </div>
@@ -447,11 +445,11 @@ Successfully built twint
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: aiohttp==3.7.0 in /usr/local/lib/python3.8/dist-packages (3.7.0)
-Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (3.0.4)
 Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (21.4.0)
+Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (3.0.1)
+Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (3.0.4)
 Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (1.8.2)
 Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (6.0.4)
-Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (3.0.1)
 Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
 </pre></div>
 </div>
@@ -637,7 +635,7 @@ found 0 deleted tweets in this search.
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f7078328-1af8-4481-b9d9-31dee03892ec">
+  <div id="df-9de622c0-7889-4166-a6b0-2d2c3ca9f6cc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -805,7 +803,7 @@ found 0 deleted tweets in this search.
 </table>
 <p>5 rows × 38 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f7078328-1af8-4481-b9d9-31dee03892ec')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9de622c0-7889-4166-a6b0-2d2c3ca9f6cc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -856,12 +854,12 @@ found 0 deleted tweets in this search.
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f7078328-1af8-4481-b9d9-31dee03892ec button.colab-df-convert');
+          document.querySelector('#df-9de622c0-7889-4166-a6b0-2d2c3ca9f6cc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f7078328-1af8-4481-b9d9-31dee03892ec');
+          const element = document.querySelector('#df-9de622c0-7889-4166-a6b0-2d2c3ca9f6cc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -917,11 +915,11 @@ found 0 deleted tweets in this search.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Welcome to Project Sains Data</p>
         </div>
     </a>
 </div>
@@ -931,7 +929,7 @@ found 0 deleted tweets in this search.
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By 20-174 Nurul Faizah<br/>
+    By 20-174NurulFaizah<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
