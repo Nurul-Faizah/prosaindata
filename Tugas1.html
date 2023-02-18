@@ -1,0 +1,1180 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Project Sains Data
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Tugas1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Tugas1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p>#Crawling Data Twitter</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/twintproject/twint.git
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning into &#39;twint&#39;...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>remote: Enumerating objects: 47, done.
+remote: Counting objects:   2% (1/47)
+remote: Counting objects:   4% (2/47)
+remote: Counting objects:   6% (3/47)
+remote: Counting objects:   8% (4/47)
+remote: Counting objects:  10% (5/47)
+remote: Counting objects:  12% (6/47)
+remote: Counting objects:  14% (7/47)
+remote: Counting objects:  17% (8/47)
+remote: Counting objects:  19% (9/47)
+remote: Counting objects:  21% (10/47)
+remote: Counting objects:  23% (11/47)
+remote: Counting objects:  25% (12/47)
+remote: Counting objects:  27% (13/47)
+remote: Counting objects:  29% (14/47)
+remote: Counting objects:  31% (15/47)
+remote: Counting objects:  34% (16/47)
+remote: Counting objects:  36% (17/47)
+remote: Counting objects:  38% (18/47)
+remote: Counting objects:  40% (19/47)
+remote: Counting objects:  42% (20/47)
+remote: Counting objects:  44% (21/47)
+remote: Counting objects:  46% (22/47)
+remote: Counting objects:  48% (23/47)
+remote: Counting objects:  51% (24/47)
+remote: Counting objects:  53% (25/47)
+remote: Counting objects:  55% (26/47)
+remote: Counting objects:  57% (27/47)
+remote: Counting objects:  59% (28/47)
+remote: Counting objects:  61% (29/47)
+remote: Counting objects:  63% (30/47)
+remote: Counting objects:  65% (31/47)
+remote: Counting objects:  68% (32/47)
+remote: Counting objects:  70% (33/47)
+remote: Counting objects:  72% (34/47)
+remote: Counting objects:  74% (35/47)
+remote: Counting objects:  76% (36/47)
+remote: Counting objects:  78% (37/47)
+remote: Counting objects:  80% (38/47)
+remote: Counting objects:  82% (39/47)
+remote: Counting objects:  85% (40/47)
+remote: Counting objects:  87% (41/47)
+remote: Counting objects:  89% (42/47)
+remote: Counting objects:  91% (43/47)
+remote: Counting objects:  93% (44/47)
+remote: Counting objects:  95% (45/47)
+remote: Counting objects:  97% (46/47)
+remote: Counting objects: 100% (47/47)
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects:   2% (1/44)
+remote: Compressing objects:   4% (2/44)
+remote: Compressing objects:   6% (3/44)
+remote: Compressing objects:   9% (4/44)
+remote: Compressing objects:  11% (5/44)
+remote: Compressing objects:  13% (6/44)
+remote: Compressing objects:  15% (7/44)
+remote: Compressing objects:  18% (8/44)
+remote: Compressing objects:  20% (9/44)
+remote: Compressing objects:  22% (10/44)
+remote: Compressing objects:  25% (11/44)
+remote: Compressing objects:  27% (12/44)
+remote: Compressing objects:  29% (13/44)
+remote: Compressing objects:  31% (14/44)
+remote: Compressing objects:  34% (15/44)
+remote: Compressing objects:  36% (16/44)
+remote: Compressing objects:  38% (17/44)
+remote: Compressing objects:  40% (18/44)
+remote: Compressing objects:  43% (19/44)
+remote: Compressing objects:  45% (20/44)
+remote: Compressing objects:  47% (21/44)
+remote: Compressing objects:  50% (22/44)
+remote: Compressing objects:  52% (23/44)
+remote: Compressing objects:  54% (24/44)
+remote: Compressing objects:  56% (25/44)
+remote: Compressing objects:  59% (26/44)
+remote: Compressing objects:  61% (27/44)
+remote: Compressing objects:  63% (28/44)
+remote: Compressing objects:  65% (29/44)
+remote: Compressing objects:  68% (30/44)
+remote: Compressing objects:  70% (31/44)
+remote: Compressing objects:  72% (32/44)
+remote: Compressing objects:  75% (33/44)
+remote: Compressing objects:  77% (34/44)
+remote: Compressing objects:  79% (35/44)
+remote: Compressing objects:  81% (36/44)
+remote: Compressing objects:  84% (37/44)
+remote: Compressing objects:  86% (38/44)
+remote: Compressing objects:  88% (39/44)
+remote: Compressing objects:  90% (40/44)
+remote: Compressing objects:  93% (41/44)
+remote: Compressing objects:  95% (42/44)
+remote: Compressing objects:  97% (43/44)
+remote: Compressing objects: 100% (44/44)
+remote: Compressing objects: 100% (44/44), done.
+remote: Total 47 (delta 3), reused 14 (delta 0), pack-reused 0
+Unpacking objects:   2% (1/47)
+Unpacking objects:   4% (2/47)
+Unpacking objects:   6% (3/47)
+Unpacking objects:   8% (4/47)
+Unpacking objects:  10% (5/47)
+Unpacking objects:  12% (6/47)
+Unpacking objects:  14% (7/47)
+Unpacking objects:  17% (8/47)
+Unpacking objects:  19% (9/47)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unpacking objects:  21% (10/47)
+Unpacking objects:  23% (11/47)
+Unpacking objects:  25% (12/47)
+Unpacking objects:  27% (13/47)
+Unpacking objects:  29% (14/47)
+Unpacking objects:  31% (15/47)
+Unpacking objects:  34% (16/47)
+Unpacking objects:  36% (17/47)
+Unpacking objects:  38% (18/47)
+Unpacking objects:  40% (19/47)
+Unpacking objects:  42% (20/47)
+Unpacking objects:  44% (21/47)
+Unpacking objects:  46% (22/47)
+Unpacking objects:  48% (23/47)
+Unpacking objects:  51% (24/47)
+Unpacking objects:  53% (25/47)
+Unpacking objects:  55% (26/47)
+Unpacking objects:  57% (27/47)
+Unpacking objects:  59% (28/47)
+Unpacking objects:  61% (29/47)
+Unpacking objects:  63% (30/47)
+Unpacking objects:  65% (31/47)
+Unpacking objects:  68% (32/47)
+Unpacking objects:  70% (33/47)
+Unpacking objects:  72% (34/47)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unpacking objects:  74% (35/47)
+Unpacking objects:  76% (36/47)
+Unpacking objects:  78% (37/47)
+Unpacking objects:  80% (38/47)
+Unpacking objects:  82% (39/47)
+Unpacking objects:  85% (40/47)
+Unpacking objects:  87% (41/47)
+Unpacking objects:  89% (42/47), 37.08 KiB | 72.00 KiB/s
+Unpacking objects:  91% (43/47), 37.08 KiB | 72.00 KiB/s
+Unpacking objects:  93% (44/47), 37.08 KiB | 72.00 KiB/s
+Unpacking objects:  95% (45/47), 37.08 KiB | 72.00 KiB/s
+Unpacking objects:  97% (46/47), 37.08 KiB | 72.00 KiB/s
+Unpacking objects: 100% (47/47), 37.08 KiB | 72.00 KiB/s
+Unpacking objects: 100% (47/47), 42.93 KiB | 75.00 KiB/s, done.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> twint
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/prosaindata/tugas/twint
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3 install . -r requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Processing /content/drive/MyDrive/prosaindata/tugas/twint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 1)) (3.8.4)
+Collecting aiodns
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 3)) (4.6.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cchardet
+  Downloading cchardet-2.1.7-cp38-cp38-manylinux2010_x86_64.whl (265 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/266.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">266.0/266.0 KB</span> <span class=" -Color -Color-Red">16.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting dataclasses
+  Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elasticsearch
+  Downloading elasticsearch-8.6.2-py3-none-any.whl (385 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/385.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">385.4/385.4 KB</span> <span class=" -Color -Color-Red">32.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 7)) (1.7.1)
+Requirement already satisfied: pandas&gt;=0.23.0 in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 8)) (1.3.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp_socks&lt;=0.4.1
+  Downloading aiohttp_socks-0.4.1-py3-none-any.whl (17 kB)
+Collecting schedule
+  Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fake-useragent
+  Downloading fake_useragent-1.1.1-py3-none-any.whl (50 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/50.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.4/50.4 KB</span> <span class=" -Color -Color-Red">6.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting googletransx
+  Downloading googletransx-2.4.2.tar.gz (13 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.1)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.3.3)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (4.0.2)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (21.4.0)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.4)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycares&gt;=4.0.0
+  Downloading pycares-4.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/289.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">289.0/289.0 KB</span> <span class=" -Color -Color-Red">28.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting elastic-transport&lt;9,&gt;=8
+  Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/59.5 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 KB</span> <span class=" -Color -Color-Red">8.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.7.1)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;-r requirements.txt (line 12)) (5.10.2)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.25.1)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.12.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting urllib3&lt;2,&gt;=1.26.2
+  Downloading urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/140.6 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">140.6/140.6 KB</span> <span class=" -Color -Color-Red">17.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;-r requirements.txt (line 12)) (3.13.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;-r requirements.txt (line 13)) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (2.21)
+Building wheels for collected packages: twint, googletransx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=2a384069c329d0a15d78dd8c73f1ff2fad06bfc53a430df52d0741cefa5718ca
+  Stored in directory: /tmp/pip-ephem-wheel-cache-gyzni5md/wheels/20/e1/2d/7f29314c8c0e321c6f657dd9646e875153f3ea8481209ac26f
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for googletransx (setup.py) ... ?25l?25hdone
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=a2389dc997697d8c59a979fed5e6cb9e225edf5f556d054e79af26fde871961a
+  Stored in directory: /root/.cache/pip/wheels/6a/54/98/96b62f08dd73eca3147e36b5099d77c3f8fedc5472bb488167
+Successfully built twint googletransx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: dataclasses, cchardet, urllib3, schedule, pycares, fake-useragent, elastic-transport, googletransx, elasticsearch, aiohttp_socks, aiodns, twint
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 1.24.3
+    Uninstalling urllib3-1.24.3:
+      Successfully uninstalled urllib3-1.24.3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiodns-3.0.0 aiohttp_socks-0.4.1 cchardet-2.1.7 dataclasses-0.6 elastic-transport-8.4.0 elasticsearch-8.6.2 fake-useragent-1.1.1 googletransx-2.4.2 pycares-4.3.0 schedule-1.1.0 twint-2.1.21 urllib3-1.26.14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install <span class="nv">aiohttp</span><span class="o">==</span><span class="m">3</span>.7.0
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp==3.7.0
+  Downloading aiohttp-3.7.0-cp38-cp38-manylinux2014_x86_64.whl (1.5 MB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/1.5 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.5/1.5 MB</span> <span class=" -Color -Color-Red">56.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting chardet&lt;4.0,&gt;=2.0
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/133.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">133.4/133.4 KB</span> <span class=" -Color -Color-Red">18.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (21.4.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (6.0.4)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (1.8.2)
+Collecting async-timeout&lt;4.0,&gt;=3.0
+  Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: chardet, async-timeout, aiohttp
+  Attempting uninstall: chardet
+    Found existing installation: chardet 4.0.0
+    Uninstalling chardet-4.0.0:
+      Successfully uninstalled chardet-4.0.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Attempting uninstall: async-timeout
+    Found existing installation: async-timeout 4.0.2
+    Uninstalling async-timeout-4.0.2:
+      Successfully uninstalled async-timeout-4.0.2
+  Attempting uninstall: aiohttp
+    Found existing installation: aiohttp 3.8.4
+    Uninstalling aiohttp-3.8.4:
+      Successfully uninstalled aiohttp-3.8.4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiohttp-3.7.0 async-timeout-3.0.1 chardet-3.0.4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pip install nest-asyncio
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.8/dist-packages (1.5.6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> <span class="c1">#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.</span>
+<span class="kn">import</span> <span class="nn">twint</span> <span class="c1">#untuk import twint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;#prabowo&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626811264935809026 2023-02-18 05:10:04 +0000 &lt;PrabowoPI&gt; Pemimpin ini bersatu, inspiratif apa yang dilakukan ya?? #prabowopersatuanindonesia #prabowo #beritabolaterkini #NewsUpdate #Newsnight #beritaViral #IndoHot #indoviralLink #Jokowi #berita  https://t.co/znB72BUdWs
+1626803144180273152 2023-02-18 04:37:48 +0000 &lt;dpcgerindramlw&gt; Selamat Memperingati ISRA MI&#39;RAJ Nabi Muhammad SAW  27 Rajab 1444 H / 18 Februari 2023  #mendingprabowo #terusmaju #prabowo #prabowopresiden #prabowopresiden2024 #prabowopresidengerindramenang #gerindra #partaigerindra #dpcgerindrakabupatenmelawi #gerindramelawi #kabupatenmelawi  https://t.co/Nd05TbAQEO
+1626803085237706753 2023-02-18 04:37:34 +0000 &lt;dpcgerindramlw&gt; Selamat Memperingati ISRA MI&#39;RAJ Nabi Muhammad SAW  27 Rajab 1444 H / 18 Februari 2023  #mendingprabowo #terusmaju #prabowo #prabowopresiden #prabowopresiden2024 #prabowopresidengerindramenang #gerindra #partaigerindra #dpcgerindrakabupatenmelawi #gerindramelawi #kabupatenmelawi  https://t.co/YEwx0fslN2
+1626803025875701762 2023-02-18 04:37:20 +0000 &lt;dpcgerindramlw&gt; Selamat Memperingati ISRA MI&#39;RAJ Nabi Muhammad SAW  27 Rajab 1444 H / 18 Februari 2023  #mendingprabowo #terusmaju #prabowo #prabowopresiden #prabowopresiden2024 #prabowopresidengerindramenang #gerindra #partaigerindra #dpcgerindrakabupatenmelawi #gerindramelawi #kabupatenmelawi  https://t.co/aLYDbhwYgZ
+1626802468150726661 2023-02-18 04:35:07 +0000 &lt;yantanu2_08&gt; Belum Kampanye saja #Prabowo sudah banyak menolong rakyatnya;  - Mengirim ratusan remaja Putri U18 Sekolah #SepakBola ke Qatar - Bantuan ratusan mobil kebersihan di seluruh Masjid di Indonesia  - Lapangan Kerja bagi yg putus sekolah  Apalagi ini 👇 Apalah jadinya bila jadi RI 1?  https://t.co/EqbksKLQa9
+1626801202829860867 2023-02-18 04:30:05 +0000 &lt;CJS_twitt_&gt; “Rekam jejak Pak @prabowo tangguh” Immanuel Ebenezer.  #Prabowo #Capres2024 #CatatanJurnalisSukriansyah   Selengkapnya hanya di YouTube Channel Catatan Jurnalis Sukriansyah  https://t.co/3La4jJY1si
+1626800473994072064 2023-02-18 04:27:12 +0000 &lt;BANGSAygSUJUD&gt; @Alie_Fahnoor #Prabowo mendunia 💪❤️🇮🇩
+1626799920517640193 2023-02-18 04:25:00 +0000 &lt;WaluyoNani&gt;  https://t.co/VyYIAK4X1B  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | Jerome | Ria SW | Masjidil Haram | Islam | #Unlocked | JoMan Jokowi Mania
+1626798802324819970 2023-02-18 04:20:33 +0000 &lt;Alie_Fahnoor&gt; Pak #Prabowo berbakti untuk negeri   https://t.co/VSy2G7J8uq  Beliau bertemu dengan Menhan se-ASEAN dan melakukan pertemuan bilateral dengan mereka membahas kerjasama pertahanan serta memperkenalkan industri pertahanan buatan Pindad
+1626793754018586624 2023-02-18 04:00:29 +0000 &lt;gerindra_la&gt; Memperingati Isra Miraj Nabi Muhammad Shallallahu &#39;Alaihi Wasallam 27 Rajab 1444 H  @Gerindra @gerindrajatim_  ___  #gerindra #prabowo #gerindramenang #prabowopresiden #gerindralamongan #lamonganmegilan #politisisantri #IsraMiraj  https://t.co/pAavwUUHMr
+1626793648611532802 2023-02-18 04:00:04 +0000 &lt;08kiriman&gt; #prabowopersatuanindonesia #prabowo #like #indonesia #beritaterkini #joman #prabowo08 #prabowosubianto #FYP  https://t.co/DvWj4vaoHh
+1626791104065712135 2023-02-18 03:49:58 +0000 &lt;JatengTV&gt; (10) Dalam PT Perorangan, modal pendirian badan hukum bersifat bebas, mulai dari Rp0 hingga maksimal Rp5 Miliar. Menarik bukan? #Indonesiamaju #jokowi #ptperorangan #badanhukum #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626788921270210560 2023-02-18 03:41:17 +0000 &lt;BANGSAygSUJUD&gt; @KurangiBodoh @prabowo @bengkeldodo @are_inismyname @Kosim__ @Alie_Fahnoor @azissubekti @Dahnilanzar @nurasmi69 @Kenikir27 @yantanu2_08 @GERAKAN08 #Prabowo semakin di ❤💞❤💞
+1626786217286316032 2023-02-18 03:30:33 +0000 &lt;Daffanha&gt;  https://t.co/kJIgZPDC4R #prabowo
+1626782066129141762 2023-02-18 03:14:03 +0000 &lt;AtapNews&gt; Khofifah Dibidik Kubu Prabowo dan Anies Jelang Pilpres 2024  Baca selengkapnya disini  https://t.co/Cv7WEEieny  #atapnews #beritaViral #prabowo #aniesbaswedan #pemilu  https://t.co/XFrFKrNDCR
+1626777929215782913 2023-02-18 02:57:37 +0000 &lt;BANGSAygSUJUD&gt; Negara lain boleh punya persenjataan hebat tetapi senjata kita adalah CINTANYA RAKYAT terhadap Republik ini  Dan ini adalah senjata terampuh yg paling ditakuti dunia  #Prabowo mampu menulang sum-sumkan sistem Pertahanan Keamanan Rakyat Semesta menuju PENGHEBATAN INDONESIA  https://t.co/Lea2SQbJNh
+1626774398001885184 2023-02-18 02:43:35 +0000 &lt;yantanu2_08&gt; @Kimberley_20102 @GenBeWise10 @Gerindra Hahaha Kadrun Khilafah pada kelojotan  Ya syukurlah Bila Kalian dukung #prabowo  Tapi Jangan Baperan bawa ideologi khilafah radikal ya  Oke ?
+1626772991865655296 2023-02-18 02:37:59 +0000 &lt;yantanu2_08&gt; @ch_chotimah2 @ganjarpranowo @prabowo @jokowi @aniesbaswedan Politik #Prabowo dlm menundukkan lawan BUKAN dg memukul tapi merangkul penuh CINTA KASIH #AHIMSA  SEBAB Bila digebuk semakin panjang SEBAB BARU MENGGANTI AKIBAT LAMA terus silih berganti  Pejuang GAM,TimTim yg pernah saling tembak, jadi sahabat apalagi JOMAN &amp;amp; dirimu yg CANTIK ?  https://t.co/1y1yYebFEU
+1626772291597254656 2023-02-18 02:35:12 +0000 &lt;klaten_kab&gt; Selamat memperingati Isra Mi&#39;raj 1444 H #mendingprabowo #prabowosubianto #prabowo #gerindra #gerindrajateng #gerindrajawatengah  https://t.co/CWPWbt8C36
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626768456912900096 2023-02-18 02:19:58 +0000 &lt;JatengTV&gt; (13) Masih belum banyak peraturan yang mengatur perusahaan PT perorangan ini sehingga pemilik perusahaan bebas melakukan aktivitas usahanya. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626767873900449792 2023-02-18 02:17:39 +0000 &lt;Sorali_lali&gt; Pagi cinta ❤️ Cuaca hari ini masih gelap terang seperti cintaku padamu kadang datang kadang pergi 😁  Apa kabarmu diperbukitan nun jauh di sana?  Salam-salam buat pak #prabowo tetap memantau kinerja para prajurit di setiap provinsi atau wilayah yang terdampak konflik (Papua)  https://t.co/DcqephvxWf
+1626757715824619522 2023-02-18 01:37:17 +0000 &lt;yantanu2_08&gt; Bila Benar pertemuan @prabowo dan @KhofifahIP atas arahan @jokowi itu jauh lebih baik  Artinya Pak #JokowiSayang pada #prabowo untuk dapat melindungi warga minoritas  Agar terbebas dari intimidasi persekusi kelompok yg merasa paling superioritas  https://t.co/kEIXAowzYA
+1626753513643728896 2023-02-18 01:20:35 +0000 &lt;PrabowoPI&gt; Selamat merayakan Isra Miraj &quot;Sebuah perjalanan agung yang sarat akan hikmah&quot; #prabowopersatuanindonesia #prabowo  #NewsUpdate #isramiraj #IsraMiraj2023 #beritaterkini #beritaViral  https://t.co/yTGv4DpIJD
+1626752635553595392 2023-02-18 01:17:06 +0000 &lt;Alie_Fahnoor&gt; Pak #Prabowo sbg Ketua Umumnya, Loch Eeh    https://t.co/l3KwO9u1S4  Kejuaraan ini diikuti oleh total 863 peserta berasal dari 87 kontingen &amp;amp; 45 perguruan silat nasional yg dibagi dlm kategori perorangan, berpasangan, kelompok untuk peserta SD, SMP/MTS, SMA/SMK &amp;amp; Mahasiswa / Umum.
+1626749838275780609 2023-02-18 01:05:59 +0000 &lt;DpdBali&gt; Hari ini membuat kita percaya pada keajaiban. Jadi mari kita coba menciptakan keajaiban dalam hidup. Selamat Isra Miraj 2023🤲🏻❣️  #prabowo #Gerindra #dpdgerindrabali #gerindramenang #ahmadmuzani #sufmidaso #degadjah #MilenialBersatu #nodrama  https://t.co/6BW4HHHj2t
+1626738255965323264 2023-02-18 00:19:58 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626730703227600896 2023-02-17 23:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626728075865264128 2023-02-17 23:39:31 +0000 &lt;BANGSAygSUJUD&gt; @are_inismyname @prabowo @bengkeldodo @azissubekti @Kosim__ @yosephrosario_ #Prabowo bergerak 💪💪🇮🇩❤️🇮🇩💪💪
+1626719528007901184 2023-02-17 23:05:33 +0000 &lt;Alie_Fahnoor&gt; Bekerja memberi bukti dalam keheningan    https://t.co/Ssws6xxrFF  Di tengah kesibukan Pak #Prabowo sebagai Menhan, masih menyempatkan bertanya tentang perkembangan status  tersandera Pilot Susi Air - Captain Philip Mehrtens - yang berkewarganegaraan Selandia Baru di Papua
+1626715603196321793 2023-02-17 22:49:57 +0000 &lt;JatengTV&gt; (06) PT Perorangan boleh menggunakan alamat rumah sebagai lokasi usaha, selama lokasi tersebut sesuai dengan Rencana Detail Tata Ruang Daerah (RDTL). #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626710829445025792 2023-02-17 22:30:59 +0000 &lt;Alie_Fahnoor&gt; Beliau membalas cacian dan fitnah kudeta dengan senyuman   https://t.co/bdVc94ZQnl  Pertemuan Pak #Prabowo dengan eks Relawan Joman memunculkan fakta bahwa beliau  - dicap punya &quot;muka kudeta&quot; - memiliki selera humor yang tinggi sambil mengajak semua komponen bersatu dalam NKRI
+1626681597985714176 2023-02-17 20:34:49 +0000 &lt;pohan_iank&gt; Salam Indonesia Raya #prabowopresiden #2024 #Prabowo #GERINDRA #kotabogor #SYP #ahkieuweh  https://t.co/OHN9LReJBD
+1626666909348556801 2023-02-17 19:36:27 +0000 &lt;Kosim__&gt; Kami butuh pak Prabowo untuk melanjutkan kepemimpinan untuk memimpin negeri tercinta ini.  #prabowo  https://t.co/CLVo5RKjGd
+1626666182265962498 2023-02-17 19:33:34 +0000 &lt;Kosim__&gt; Ayuk ah Jawatengah #prabowo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626665941370273792 2023-02-17 19:32:37 +0000 &lt;Kosim__&gt; SEMUA AKAN PRABOWO PADA AKHIRNYA   #prabowo  https://t.co/zR20CgV2uD
+1626664614560948225 2023-02-17 19:27:20 +0000 &lt;Kosim__&gt; Pesan Prabowo   Jangan masuk partai untuk makan dan agar kaya !!  #prabowo  https://t.co/ze4g8h8gtH
+1626661923696836609 2023-02-17 19:16:39 +0000 &lt;AeroSiregar&gt; @prabowo 13.04 | Seberapa cerdas sih Pak Prabowo sebagai pribadi atau pemimpin? Ini ada penjelasannya😚 #fyp #prabowo #mendingprabowo #habibie #terusmajubersamaprabowo #dekade08
+1626660298387226624 2023-02-17 19:10:11 +0000 &lt;Kosim__&gt; Jokowi berani melakukan hilirisasi. Saya dulu rival beliau tapi saya yakin beliau hatinya merah putih, makanya itu saya gabung sama beliau, bekerja, tidak ada urusan siapa nomor satu, kita bekerja untuk membangun Republik Indonesia   Dan saya siap lanjutkan #Prabowo  https://t.co/qx9rfk8BmC
+1626658972597121026 2023-02-17 19:04:55 +0000 &lt;Kosim__&gt; Prabowo Kenang Pesan Mbah Moen:   &quot;Selalu Bela Rakyat Kecil &quot;   https://t.co/PkkcDPJS7n   #prabowo  https://t.co/NbR9Tr4qBR
+1626656815030341632 2023-02-17 18:56:21 +0000 &lt;Kosim__&gt; Wah pendukung sebelah bisa megap2 lihat foto ini  #prabowo #khofifah
+1626656159074766849 2023-02-17 18:53:44 +0000 &lt;Kosim__&gt; Temui Jokowi di Istana, Prabowo Subianto: Itu Namanya RHS  https://t.co/7xCzXizqL3   #prabowo #jokowi
+1626655206049218560 2023-02-17 18:49:57 +0000 &lt;JatengTV&gt; (14) Untuk pendirian PT Perorangan silahkan hubungi kami Telp./WhatsApp 081398298989 atau email:  https://t.co/zf770HQuGM. Proses pengurusan sekitar 1 hari sejak input data. #ptperorangan #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626639464964710400 2023-02-17 17:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1626632567515643905 2023-02-17 17:20:00 +0000 &lt;DaniaAdibah&gt; @prabowo 17.10 | Prabowo berikan mobil bantuan untuk pemeliharaan masjid dari di Papua Barat telah sampai👍🏻 #fyp #prabowo #mendingprabowo #terusmajubersamaprabowo #papua #dekade08 #mobil
+1626629403542159388 2023-02-17 17:07:25 +0000 &lt;andininowirawan&gt; Kesimpulannya Visi misi #Prabowo sama dengan visi misi #jokowi  https://t.co/iQi1CdiUVG
+1626628862301065218 2023-02-17 17:05:16 +0000 &lt;DaniaAdibah&gt; @prabowo 13.04 | Seberapa cerdas sih Pak Prabowo sebagai pribadi atau pemimpin? Ini ada penjelasannya😚 #fyp #prabowo #mendingprabowo #habibie #terusmajubersamaprabowo #dekade08
+1626606284882735104 2023-02-17 15:35:33 +0000 &lt;peludedy&gt; @Kosim__ Biasa sj om... tenang sj laahh om.. berserahlah.. Allah yg mngatur segalanya... pastinya kan ad hikmah dibalik smuanya... #Prabowo denextRI1... in sya Allah...
+1626602911991234563 2023-02-17 15:22:09 +0000 &lt;AeroSiregar&gt; @prabowo 17.10 | Prabowo berikan mobil bantuan untuk pemeliharaan masjid dari di Papua Barat telah sampai👍🏻 #fyp #prabowo #mendingprabowo #terusmajubersamaprabowo #papua #dekade08 #mobil
+1626598594458398721 2023-02-17 15:05:00 +0000 &lt;bangtato08&gt; 1 Abad NU #bangtato #NU #NahdlatulUlama  #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/nnE6ES58gg
+1626592316067840000 2023-02-17 14:40:03 +0000 &lt;Camila2Sari&gt; Jangan gampang terbuai pak. Massa JoMan cuma segelintir orang.   #Jokowi #Prabowo #Pilpres2024 #JoMan #Anies #Ganjar  https://t.co/VylasVd5zc
+1626592302524243968 2023-02-17 14:40:00 +0000 &lt;bangtato08&gt; Di angkot ;D #bangtato #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/F6xvZdBrgB
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626586011047235585 2023-02-17 14:15:00 +0000 &lt;bangtato08&gt; Persamaan Prabowo dengan Bunda Corla #bangtato #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/aiuF6Lb93C
+1626568872588627968 2023-02-17 13:06:54 +0000 &lt;bangtato08&gt; Bang Tato Mimpi :D #bangtato #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/mB4ulsr2y8
+1626567689425788928 2023-02-17 13:02:11 +0000 &lt;gerindra_pati&gt; #mendingprabowo #prabowo #gerindra #gerindrajawatengah #gerindrajateng #gerindrapati  https://t.co/nIVuGKCbQB
+1626564185302921222 2023-02-17 12:48:16 +0000 &lt;bangtato08&gt; Bang Tato dan Ujang nonton Reaction :D #bangtato #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/0vxqBNtd7D
+1626560211124371456 2023-02-17 12:32:29 +0000 &lt;gerindra_ktmgl&gt; Rapat Koordinasi DPC Partai Gerindra Dan Badan Badan Se Dapil DPR RI VI   #rapatkoordinasi  #mendingprabowo  #prabowo  #prabowosubianto  #gerindra  #gerindrakotamagelang  https://t.co/rqwnb7BA9O
+1626560158523613185 2023-02-17 12:32:16 +0000 &lt;bangtato08&gt; Bang Tato dan Ujang nonton Pantun Pak Prabowo :D #bangtato #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/TvfM8Wv2te
+1626556980436537345 2023-02-17 12:19:38 +0000 &lt;yosephrosario_&gt; Kami harapkan pelajaran persatuan nasional yang diajarkan Pak Prabowo kepada kami dan juga Pak Jokowi untuk sama-sama bersatu membangun negara ini,&quot; ujar Budi.   #prabowo
+1626556976636522499 2023-02-17 12:19:37 +0000 &lt;yosephrosario_&gt; Jelang pemilihan umum (Pemilu) 2024, kewajiban semua pihak adalah menjaga persatuan. Jika persatuan tersebut terwujud, Indonesia akan menjadi negara besar nomor empat pada 2045.  #prabowo
+1626556973012631552 2023-02-17 12:19:36 +0000 &lt;yosephrosario_&gt; &quot;Kita ingin belajar oleh Pak Prabowo tentang patriotisme, itu yang sebagai generasi yang lebih muda. Pesan penting dari pertemuan ini adalah Prabowo sampaikan dan ajarkan kepada kami tentang persatuan nasional,&quot; ujar Budi.  #prabowo
+1626556969464262658 2023-02-17 12:19:36 +0000 &lt;yosephrosario_&gt; Pertemuannya dengan Prabowo bertepatan dengan Hari Pahlawan. Prabowo juga dipandangnya sebagai patriot sejati bagi Indonesia.  #prabowo
+1626556965727109120 2023-02-17 12:19:35 +0000 &lt;yosephrosario_&gt; Kendati demikian, engenai dukungannya pada pemilihan presiden (Pilpres) 2024, Musra yang terdiri dari kumpulan relawan mengaku ikut kepada keputusan Jokowi.Pokoknya, kami ikut Pak Jokowi. Pak jokowi dukung prabowo, kami dukung,&quot; ujar Budi.  #prabowo
+1626556961838989314 2023-02-17 12:19:34 +0000 &lt;yosephrosario_&gt; &quot;Yang pasti Musra itu kan rekam publik paling jujur  paling apa adanya gitu loh. Kita kan tidak merekayasa,&quot; ujar Wakil Menteri Desa, Pembangunan Daerah Tertinggal dan Transmigrasi (Wamendes PDTT) itu.  #prabowo
+1626556958064144385 2023-02-17 12:19:33 +0000 &lt;yosephrosario_&gt; Ia mengatakan, Musra sebagai gambaran aspirasi dan keinginan rakyat terhadap pemimpinnya. Hasil Musra sudah diserahkan langsung ke Jokowi sebelum diumumkan kepada publik.  #prabowo
+1626556954356375552 2023-02-17 12:19:32 +0000 &lt;yosephrosario_&gt; Masyarakat masih menginginkan Pak Prabowo jadi penerus Pak Jokowi,&quot; ujar Budi di kediaman Prabowo, Jakarta, Kamis  #prabowo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626556950581514241 2023-02-17 12:19:31 +0000 &lt;yosephrosario_&gt; Hasil Musra merupakan suara dan aspirasi rakyat yang ditampung oleh semua relawan Jokowi di berbagai wilayah Indonesia. &quot;Pak Prabowo itu kan di rekaman Musra kita sudah menonjol, gitu loh.   #prabowo
+1626556946357841921 2023-02-17 12:19:30 +0000 &lt;yosephrosario_&gt; Prabowo menjadi salah nama calon presiden (capres) yang dihasilkan oleh Musyawarah Rakyat (Musra) yang terdiri atas relawan Presiden Joko Widodo (Jokowi).   #prabowo
+1626556941962199040 2023-02-17 12:19:29 +0000 &lt;yosephrosario_&gt; Penanggung jawab Musyawarah Rakyat (Musra) yang juga Ketua Umum Pro Joko Widodo (Projo) Budi Arie Setiadi menemui Ketua Umum Partai Gerindra Prabowo Subianto.  #prabowo
+1626556939118452736 2023-02-17 12:19:28 +0000 &lt;yosephrosario_&gt; Musra: Rakyat Ingin Prabowo Jadi Penerus Jokowi  Namun, Musra yang terdiri atas kumpulan relawan mengaku ikut kepada keputusan Jokowi.  #prabowo  https://t.co/mAIWel1bzn
+1626555586052771840 2023-02-17 12:14:06 +0000 &lt;Alie_Fahnoor&gt; Indonesia dan Bantuan Kemanusiaan    https://t.co/5guZeYL8Ur  Pertemuan kali ini membahas tentang logistik dan beragam bantuan dari Pemerintah Indonesia untuk negara #Turkey .   Kemenhan yang dipimpin oleh Pak #Prabowo merupakan salah satu lembaga yang menangani urusan itu.
+1626554773918089216 2023-02-17 12:10:52 +0000 &lt;bangtato08&gt; Ujang Nangis :( #bangtato  #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/OnzEmFBfoH
+1626550395169570816 2023-02-17 11:53:28 +0000 &lt;KirinIeyasu&gt; @WagimanDeep212_ Sudah simbiosis mutualisme  Pertanyaan dimanakah pilot susi air seandainya sikon sama dgn pilot di papua itu  Mungkin bisa belajar dengan P. #Prabowo saat lama di Papua   Bagaimana dgn p. #janoslan p, wakcam Kec #Setiabudi yang dua kali dugaan manipulasi rapat  https://t.co/3RVisHwfLd
+1626550275287977985 2023-02-17 11:53:00 +0000 &lt;bangtato08&gt; Mogok :D #bangtato #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/eYwtMxIXu1
+1626538785893941248 2023-02-17 11:07:20 +0000 &lt;dekade_08&gt; Kenapa pembangunan yang dimulai Pak Jokowi harus diteruskan? Ini juga sekaligus alasan kenapa Pak Prabowo berkali kali menegaskan bahwa dirinya akan meneruskan apa apa yang sudh dikerjakan Presiden #jokowi   #prabowo  #dekade08  #indonesia #mendingprabowo #terusmajubersamaprabowo  https://t.co/6Dgw9aBAEs
+1626535428059979776 2023-02-17 10:54:00 +0000 &lt;SilumanSlot&gt; UMATSLOT Situs Gacor dan Terpercaya Sejak 2010 #winmetawin #jhopeINTHEBOX #Chico #Jumat #B.A.P #Prabowo Fokus Konsisten #Ada Di Dekade 08 #Indonesia Kita Terus Maju #NCT DREAM KYOCERA DOME DAY1 #HariIniJakartaSTINBIN #Changbin #skintific #PainterOfTheNight #jeketiselcaday #TaxiDr  https://t.co/chYwGr27bY
+1626531690767347712 2023-02-17 10:39:09 +0000 &lt;KANG_IMAM_08&gt; Panjang umur orang baik. Kami butuh pak Prabowo untuk melanjutkan kepemimpinan mimpin negeri tercinta ini.  #prabowo #PrabowoSubianto #Indonesia #adildanmakmur #for2024 #JumatBerkah  https://t.co/uPtXGfXRhn
+1626529554188890113 2023-02-17 10:30:39 +0000 &lt;bengkeldodo&gt; Main IG saja sana yang ga bersyukur hidupnya main Twitter bisa gambar bisa link .. kok hanya kirim krincrutan semua 😁  Prabowo Subianto bukan @prabowo   https://t.co/ddQApsMq2q  #Prabowo
+1626527489282691072 2023-02-17 10:22:27 +0000 &lt;de_gadjah&gt; Kompak, Solid, Komunikasi dan Kordinasi yg baik, Kerja keras dan Loyalitas tanpa batas adalah Sistem kami  dalam perjuangan untuk menjemput kemenangan  Terima kasih saudara2 atas loyalitas dan kerja kerasnya, perjuangan kita masih panjang 🇮🇩❤️😇🤙  #Prabowo #Gerindra #DeGadjah  https://t.co/92vUlE6zzP
+1626524800754794499 2023-02-17 10:11:46 +0000 &lt;bengkeldodo&gt; @Kimberley_20102 iyah bahkan untuk dki atas usulan #Prabowo dan dilaksanakan oleh Anies  https://t.co/tq4jdWmSXZ
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626522343068811264 2023-02-17 10:02:00 +0000 &lt;gatot439196031&gt; Untuk indonesia prabowo ingin melanjutkna keinginannya... #prabowopersatuanindonesia #prabowo #Newsnight #NewsUpdate #UntukIndonesiaLebihBaik  https://t.co/8xcNOIegiU
+1626520917609439232 2023-02-17 09:56:20 +0000 &lt;gatot439196031&gt; Prabowo membangun NTB, Dedikasi apa ya #prabowopersatuanindonesia #prabowo #Newsnight #Indonesia #NTB  https://t.co/FOwQnjQ5qp
+1626519971345100801 2023-02-17 09:52:35 +0000 &lt;AdeniaEllena&gt; @prabowo 17.10 | Prabowo berikan mobil bantuan untuk pemeliharaan masjid dari di Papua Barat telah sampai👍🏻 #fyp #prabowo #mendingprabowo #terusmajubersamaprabowo #papua #dekade08 #mobil
+1626519310192766976 2023-02-17 09:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626519089383350272 2023-02-17 09:49:04 +0000 &lt;_BangOwo&gt; Prabowo untuk lombok perluasan air untuk warga #prabowopersatuanindonesia #indonesiamemanggil #prabowo #lombok #airbersih  https://t.co/G2XWjXRRGs
+1626516632079327234 2023-02-17 09:39:18 +0000 &lt;dekade_08&gt; Ini lho bubur ala Pak Prabowo, pake bawang putih mentah 6 siung. Katanya sih bagus buat kesehatan.  Ada yang lebih unik ngga makan buburnya?  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #timbuburdidaduk #bubur  https://t.co/4bmIv7PXzX
+1626516121980645379 2023-02-17 09:37:17 +0000 &lt;ILaduzing&gt; Prabowo untunk lobok apa yang dilakunnya di NTB #prabowopersatuanindonesi #prabowo #Newsnight #beritabolaterbaru #beritaterkini #indoviralLink  https://t.co/YJMzPtHr5r
+1626514904500035584 2023-02-17 09:32:27 +0000 &lt;ratna_sabilla3&gt; Sumber air sudah dekat prabowo bersama lombok #prabowopersatuanindonesia #Newsnight #prabowo #Indonesia #lombok  https://t.co/whbYlKvSbv
+1626514570344013824 2023-02-17 09:31:07 +0000 &lt;bangtato08&gt; Gotong Royong yuk ;D #bangtato #dekade08 #prabowo #prabowopersatuanindonesia  https://t.co/utCQjGBDRM
+1626514049977692160 2023-02-17 09:29:03 +0000 &lt;ABurundy&gt; Keinginan prabowo nanti bersama jokowi #prabowopersatuanindonesia #prabowo #UntukIndonesiaLebihBaik #NewsUpdate  https://t.co/ovnZrFpl1C
+1626513453711245312 2023-02-17 09:26:41 +0000 &lt;TradingDoge1&gt; Prabowo untuk masyarakat akhirnya beresmikan #prabowopersatuanindonesia #prabowo #NewsUpdates #beritaterkini #indoterbaru #indonesiaterbaru  https://t.co/bYFT4OgJRL
+1626513204020142080 2023-02-17 09:25:41 +0000 &lt;AdeniaEllena&gt; @prabowo 13.04 | Seberapa cerdas sih Pak Prabowo sebagai pribadi atau pemimpin? Ini ada penjelasannya😚 #fyp #prabowo #mendingprabowo #habibie #terusmajubersamaprabowo #dekade08
+1626511768406331392 2023-02-17 09:19:59 +0000 &lt;JatengTV&gt; (05) Pertanggungjawaban PT Perorangan sebatas modal yang disetor. Pemegang saham tidak bertanggung jawab secara pribadi melebihi saham yang dimiliki. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626511767554646019 2023-02-17 09:19:59 +0000 &lt;JatengTV&gt; (05) Pertanggungjawaban PT Perorangan sebatas modal yang disetor. Pemegang saham tidak bertanggung jawab secara pribadi melebihi saham yang dimiliki. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZTPEG
+1626511083744923650 2023-02-17 09:17:16 +0000 &lt;AblehYupi&gt; Prabowo untuk ntb, aoa yg di lakukan pak prabowo... #prabowopersatuanindonesia #prabowo #NewsUpdate #beritaterkini #beritaterbaru #Indonesian #Indonesia2023  https://t.co/DdZ0JeCHHh
+1626511040258375681 2023-02-17 09:17:05 +0000 &lt;kuatbacacom&gt; Prabowo Dia akui merasa terhormat dan lebih semangat mendapat dukungan dari Joman. . #kuatbaca #kuatbacacom #kuatknow #prabowosubianto #joman #prabowo #prabowo08 #jokowimania #jokowi
+1626510005154480128 2023-02-17 09:12:58 +0000 &lt;SilumanSlot&gt; UMATSLOT Situs Gacor dan Terpercaya Sejak 2010 #winmetawin #jhopeINTHEBOX #Chico #Jumat #B.A.P #Prabowo Fokus Konsisten #Ada Di Dekade 08 #Indonesia Kita Terus Maju #NCT DREAM KYOCERA DOME DAY1 #HariIniJakartaSTINBIN #Changbin #skintific #PainterOfTheNight #jeketiselcaday #TaxiDr  https://t.co/VF73P3XCva
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626508497008615425 2023-02-17 09:06:59 +0000 &lt;SaharaaSindy&gt; Prabowo ada di NTB.... #prabowopersatuanindonesia #prabowo #NewsUpdate #beritaterkini #beritaViral #IndonesiaBangkit #IndonesiaMemanggil  https://t.co/MRnWKydlF4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626506228783280130 2023-02-17 08:57:58 +0000 &lt;forumkeadilan_&gt; Menhan Prabowo Subianto mengaku siap melanjutkan kepemimpinan Presiden Joko Widodo. #jokowi #prabowo #capres2024 #forumkeadilan #newsupdate   https://t.co/CS70IFa78z
+1626505951833624576 2023-02-17 08:56:52 +0000 &lt;SaharaaSindy&gt; Keputusan apa yang tidak disesali prabowo #prabowopersatuanindonesia #prabowo #NewsUpdate #beritaterkini #Newsnight  https://t.co/6FTX6XowAg
+1626505259123359746 2023-02-17 08:54:07 +0000 &lt;gatot439196031&gt; #prabowopersatuanindonesia #prabowo #Ukraine #prabowo #NewsUpdate #newsberita  #prabowodanjokowi  https://t.co/4i5A9tK0TH
+1626504394719248384 2023-02-17 08:50:41 +0000 &lt;dekade_08&gt; Kita di kasih tau ngga ya rahasianya apa🤭 tapi kan itu pertemuan Menteri Pertahanan dengan Presiden ya gais masa kita perlu tau juga☺️  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #jokowi #presiden #pilpres2024  https://t.co/5XWo8TJ6PY
+1626504211155550208 2023-02-17 08:49:57 +0000 &lt;JatengTV&gt; (06) PT Perorangan boleh menggunakan alamat rumah sebagai lokasi usaha, selama lokasi tersebut sesuai dengan Rencana Detail Tata Ruang Daerah (RDTL). #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626504073800474625 2023-02-17 08:49:24 +0000 &lt;gatot439196031&gt; Prabowo berpeeluang dengan pranowo, apa yang di lakukan ya??? #prabowopersatuanindonesia #news #beritaterkini #prabowo #pranowo  https://t.co/8KYFWUYwEO
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1626503663647866880 2023-02-17 08:47:47 +0000 &lt;narasisenja08&gt; Terimakasih negeriku ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/SZk2MifMGu
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[!] No more data! Scraping will stop now.
+found 0 deleted tweets in this search.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span>
+<span class="n">Tweets_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-6bc9d1c9-f72b-4c87-bcc7-7f2004819867">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>conversation_id</th>
+      <th>created_at</th>
+      <th>date</th>
+      <th>timezone</th>
+      <th>place</th>
+      <th>tweet</th>
+      <th>language</th>
+      <th>hashtags</th>
+      <th>cashtags</th>
+      <th>...</th>
+      <th>geo</th>
+      <th>source</th>
+      <th>user_rt_id</th>
+      <th>user_rt</th>
+      <th>retweet_id</th>
+      <th>reply_to</th>
+      <th>retweet_date</th>
+      <th>translate</th>
+      <th>trans_src</th>
+      <th>trans_dest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1626811264935809026</td>
+      <td>1626811264935809026</td>
+      <td>1.676697e+12</td>
+      <td>2023-02-18 05:10:04</td>
+      <td>+0000</td>
+      <td></td>
+      <td>Pemimpin ini bersatu, inspiratif apa yang dila...</td>
+      <td>in</td>
+      <td>[prabowopersatuanindonesia, prabowo, beritabol...</td>
+      <td>[]</td>
+      <td>...</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>[]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1626803144180273152</td>
+      <td>1626803144180273152</td>
+      <td>1.676695e+12</td>
+      <td>2023-02-18 04:37:48</td>
+      <td>+0000</td>
+      <td></td>
+      <td>Selamat Memperingati ISRA MI'RAJ Nabi Muhammad...</td>
+      <td>in</td>
+      <td>[mendingprabowo, terusmaju, prabowo, prabowopr...</td>
+      <td>[]</td>
+      <td>...</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>[]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1626803085237706753</td>
+      <td>1626803085237706753</td>
+      <td>1.676695e+12</td>
+      <td>2023-02-18 04:37:34</td>
+      <td>+0000</td>
+      <td></td>
+      <td>Selamat Memperingati ISRA MI'RAJ Nabi Muhammad...</td>
+      <td>in</td>
+      <td>[mendingprabowo, terusmaju, prabowo, prabowopr...</td>
+      <td>[]</td>
+      <td>...</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>[]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1626803025875701762</td>
+      <td>1626803025875701762</td>
+      <td>1.676695e+12</td>
+      <td>2023-02-18 04:37:20</td>
+      <td>+0000</td>
+      <td></td>
+      <td>Selamat Memperingati ISRA MI'RAJ Nabi Muhammad...</td>
+      <td>in</td>
+      <td>[mendingprabowo, terusmaju, prabowo, prabowopr...</td>
+      <td>[]</td>
+      <td>...</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>[]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1626802468150726661</td>
+      <td>1626802468150726661</td>
+      <td>1.676695e+12</td>
+      <td>2023-02-18 04:35:07</td>
+      <td>+0000</td>
+      <td></td>
+      <td>Belum Kampanye saja #Prabowo sudah banyak meno...</td>
+      <td>in</td>
+      <td>[prabowo, sepakbola]</td>
+      <td>[]</td>
+      <td>...</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>[]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 38 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6bc9d1c9-f72b-4c87-bcc7-7f2004819867')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-6bc9d1c9-f72b-4c87-bcc7-7f2004819867 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-6bc9d1c9-f72b-4c87-bcc7-7f2004819867');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;prabowo.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Content with notebooks</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
