@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Tugas 1] Crawling Data Twitter &#8212; 20-174 Nurul Faizah</title>
+    <title>Project Sains Data &#8212; 20-174 Nurul Faizah</title>
   
   
   
@@ -155,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">[Tugas 1] Crawling Data Twitter</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project Sains Data</a></li>
 
 
 
@@ -373,7 +373,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>[Tugas 1] Crawling Data Twitter</h1>
+    <h1>Project Sains Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,10 +383,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">[Tugas 1] Crawling Data Twitter</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project Sains Data</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2">[Tugas 2]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
 </ul>
 
             </nav>
@@ -399,8 +399,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-1-crawling-data-twitter">
-<h1>[Tugas 1] Crawling Data Twitter<a class="headerlink" href="#tugas-1-crawling-data-twitter" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="project-sains-data">
+<h1>Project Sains Data<a class="headerlink" href="#project-sains-data" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">snscrape</span>
@@ -410,13 +410,13 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.0.20230303)
-Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
-Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
+Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
+Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
 Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
@@ -459,8 +459,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "7f7c6cf2445a4476a06a3afd9909a7e9"}</script><div class="output text_html">
-  <div id="df-61b01af8-2018-45dd-b9b1-d881fc31ab10">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "3dcb19069fcd4314b34d108f504d520b"}</script><div class="output text_html">
+  <div id="df-2862d51e-d04e-4544-8c73-e556bd50a014">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -561,7 +561,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-61b01af8-2018-45dd-b9b1-d881fc31ab10')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2862d51e-d04e-4544-8c73-e556bd50a014')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -612,12 +612,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-61b01af8-2018-45dd-b9b1-d881fc31ab10 button.colab-df-convert');
+          document.querySelector('#df-2862d51e-d04e-4544-8c73-e556bd50a014 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-61b01af8-2018-45dd-b9b1-d881fc31ab10');
+          const element = document.querySelector('#df-2862d51e-d04e-4544-8c73-e556bd50a014');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -667,7 +667,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e6f2854f-780b-497b-b152-046a241ea2ae">
+  <div id="df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -745,7 +745,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e6f2854f-780b-497b-b152-046a241ea2ae')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -796,12 +796,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e6f2854f-780b-497b-b152-046a241ea2ae button.colab-df-convert');
+          document.querySelector('#df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e6f2854f-780b-497b-b152-046a241ea2ae');
+          const element = document.querySelector('#df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1016,8 +1016,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="tugas-2">
-<h1>[Tugas 2]<a class="headerlink" href="#tugas-2" title="Permalink to this heading">#</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="tugas-4">
+<h1>[Tugas 4]<a class="headerlink" href="#tugas-4" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="http://localhost:8888/?token=456ad165f4ea36ec8cba4ebfcb67914e74cb23f142b572a4">http://localhost:8888/?token=456ad165f4ea36ec8cba4ebfcb67914e74cb23f142b572a4</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2192,10 +2192,10 @@ Successfully installed joblib-1.2.0 scikit-learn-1.2.1 scipy-1.10.1 threadpoolct
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">[Tugas 1] Crawling Data Twitter</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project Sains Data</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2">[Tugas 2]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
 </ul>
 
   </nav></div>
