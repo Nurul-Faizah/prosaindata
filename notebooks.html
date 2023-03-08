@@ -156,9 +156,6 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Project Sains Data</a></li>
-
-
-
 </ul>
 
     </div>
@@ -383,12 +380,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project Sains Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-1-crawling-data-twitter">[Tugas 1] Crawling Data Twitter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -401,6 +397,8 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="project-sains-data">
 <h1>Project Sains Data<a class="headerlink" href="#project-sains-data" title="Permalink to this heading">#</a></h1>
+<div class="section" id="tugas-1-crawling-data-twitter">
+<h2>[Tugas 1] Crawling Data Twitter<a class="headerlink" href="#tugas-1-crawling-data-twitter" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">snscrape</span>
@@ -410,13 +408,13 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.0.20230303)
-Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
 Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
+Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
 Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
@@ -459,8 +457,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "3dcb19069fcd4314b34d108f504d520b"}</script><div class="output text_html">
-  <div id="df-2862d51e-d04e-4544-8c73-e556bd50a014">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "1dbd355e21d84a508674967099c7b968"}</script><div class="output text_html">
+  <div id="df-7e879260-e008-43f7-94ca-c99f7fc13f59">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -561,7 +559,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2862d51e-d04e-4544-8c73-e556bd50a014')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7e879260-e008-43f7-94ca-c99f7fc13f59')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -612,12 +610,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2862d51e-d04e-4544-8c73-e556bd50a014 button.colab-df-convert');
+          document.querySelector('#df-7e879260-e008-43f7-94ca-c99f7fc13f59 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2862d51e-d04e-4544-8c73-e556bd50a014');
+          const element = document.querySelector('#df-7e879260-e008-43f7-94ca-c99f7fc13f59');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -646,8 +644,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="tugas-2-crawling-data-berita">
-<h1>[Tugas 2] Crawling Data Berita<a class="headerlink" href="#tugas-2-crawling-data-berita" title="Permalink to this heading">#</a></h1>
+<div class="section" id="tugas-2-crawling-data-berita">
+<h2>[Tugas 2] Crawling Data Berita<a class="headerlink" href="#tugas-2-crawling-data-berita" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://nasional.tempo.co/&quot;</span> <span class="c1"># instalisasi alamat url</span>
@@ -667,7 +665,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a">
+  <div id="df-c9687ca7-0e7d-4564-b8f7-c7115718d03f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -694,58 +692,58 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   <tbody>
     <tr>
       <th>0</th>
+      <td>Kepala BNPB: 35 Warga Masih Hilang dalam Benca...</td>
+      <td>BNPB menyatakan 35 orang warga masih hilang da...</td>
+    </tr>
+    <tr>
+      <th>1</th>
       <td>BNPB Berencana Modifikasi Cuaca di Natuna untu...</td>
       <td>BNPB menyatakan proses evakuasi korban tanah l...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>2</th>
       <td>RUU Masyarakat Adat Diharapkan Segera Disahkan</td>
       <td>Forum Diskusi Denpasar 12 edisi 140 ini membah...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>3</th>
       <td>Fakta Baru Kasus Tabrak Lari Mahasiswi Cianjur...</td>
       <td>Menurut Yudi, ada indikasi obstruction of just...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>Kasus Ibu Hamil Meninggal, Ombudsman Jabar Min...</td>
       <td>Kasus kematian ibu hamil yang ditolak dirawat ...</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>Dewan Pers akan Godok Regulasi Perlindungan Pe...</td>
       <td>Ketua Dewan Pers Ninik Rahayu meminta pejabat ...</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>6</th>
       <td>Menko Airlangga Ajak Investor Tanamkan Modal D...</td>
       <td>Dalam mendorong percepatan pemulihan ekonomi n...</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>Punya Saham di Perusahaan Rafael Alun, Kepala ...</td>
       <td>PPATK menyebut Rafael Alun diduga menggunakan ...</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>Ini Alasan Panglima TNI Yudo Margono Tak Kerah...</td>
       <td>Panglima TNI Laksamana Yudo Margono mengungkap...</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>Panglima TNI Tolak Bantuan Selandia Baru untuk...</td>
       <td>TNi dan Polri tetap bergerak hati-hati meninda...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Partai Golkar Sambut Baik jika PPP Berkoalisi ...</td>
-      <td>Ketua Dewan Pimpinan Pusat Partai Golkar Dave ...</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c9687ca7-0e7d-4564-b8f7-c7115718d03f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -796,12 +794,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a button.colab-df-convert');
+          document.querySelector('#df-c9687ca7-0e7d-4564-b8f7-c7115718d03f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e3ae14a6-5178-4a1f-95a0-3c0c1db65b7a');
+          const element = document.querySelector('#df-c9687ca7-0e7d-4564-b8f7-c7115718d03f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -830,8 +828,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="tugas-3-crawling-data-pta-trunojoyo">
-<h1>[ Tugas 3] Crawling Data PTA Trunojoyo<a class="headerlink" href="#tugas-3-crawling-data-pta-trunojoyo" title="Permalink to this heading">#</a></h1>
+<div class="section" id="tugas-3-crawling-data-pta-trunojoyo">
+<h2>[ Tugas 3] Crawling Data PTA Trunojoyo<a class="headerlink" href="#tugas-3-crawling-data-pta-trunojoyo" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create an object HTTPresponse</span>
@@ -1016,8 +1014,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="tugas-4">
-<h1>[Tugas 4]<a class="headerlink" href="#tugas-4" title="Permalink to this heading">#</a></h1>
+<div class="section" id="tugas-4">
+<h2>[Tugas 4]<a class="headerlink" href="#tugas-4" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="http://localhost:8888/?token=456ad165f4ea36ec8cba4ebfcb67914e74cb23f142b572a4">http://localhost:8888/?token=456ad165f4ea36ec8cba4ebfcb67914e74cb23f142b572a4</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2138,6 +2136,9 @@ Successfully installed joblib-1.2.0 scikit-learn-1.2.1 scipy-1.10.1 threadpoolct
 </div>
 </div>
 </div>
+<p>Penjelasan
+pertama memisahkan 4 data sesuai ketentuan setelah itu dari 4 database yang berbeda kemudian dijadikan satu menggunakan perintah pd.concat kemudian menghapus kolom-kolom id yang tidak digunakan setelah semua kolom telah di prepocessing kemudian dimasukkan membagi data dengan data test dan data training setelah itu masukkan model DecisionTreeClassifier dan menghitung akurasinya untuk model yang kedua yaitu KNeighborsClassifier dan menghitung akurasinya</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -2192,12 +2193,11 @@ Successfully installed joblib-1.2.0 scikit-learn-1.2.1 scipy-1.10.1 threadpoolct
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project Sains Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-1-crawling-data-twitter">[Tugas 1] Crawling Data Twitter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
