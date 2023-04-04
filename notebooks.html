@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -60,6 +60,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -384,6 +386,18 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-5">[Tugas 5]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-6-data-time-saries">[Tugas 6] Data Time Saries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-and-prepare-data">Get and prepare Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-data">tuning data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepo">prepo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model">model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-and-predict-knn">fit and predict knn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mse">mse</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result">result</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -407,16 +421,28 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.0.20230303)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
-Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
+Collecting snscrape
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 KB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.10.7)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
-Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
+Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed snscrape-0.6.2.20230320
 </pre></div>
 </div>
 </div>
@@ -457,8 +483,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "1dbd355e21d84a508674967099c7b968"}</script><div class="output text_html">
-  <div id="df-7e879260-e008-43f7-94ca-c99f7fc13f59">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "aa610f3a05744fac8126d9c3375cc123"}</script><div class="output text_html">
+  <div id="df-09db31a1-ae2e-460a-bd50-b4b23cc2eb1c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -486,80 +512,80 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   <tbody>
     <tr>
       <th>0</th>
-      <td>NandaySalsabila</td>
-      <td>Pak Prabowo perduli terhadap anak-anak Bahkan ...</td>
-      <td></td>
+      <td>mypresidentid</td>
+      <td>Ingat pesan Pak Bowo, tidak ada jalan yang rin...</td>
+      <td>Indonesia Raya</td>
     </tr>
     <tr>
       <th>1</th>
       <td>AdrianaDaneen</td>
-      <td>Bersama Tidar, Prabowo Subianto Dukung Generas...</td>
+      <td>Membaca Peta Kekuatan Anies, Ganjar, dan Prabo...</td>
       <td>Jakarta Capital Region</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Kosim__</td>
-      <td>Haters #prabowo https://t.co/ALmc4xXDAW</td>
-      <td>Sampang Cilacap</td>
+      <td>adiojanoski</td>
+      <td>Breaking News : Membaca Peta Kekuatan Anies, G...</td>
+      <td>ÜT: -6.3480548,106.8316685</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>adiojanoski</td>
-      <td>Breaking News : Prabowo Subianto Terima Wing K...</td>
-      <td>ÜT: -6.3480548,106.8316685</td>
+      <td>AdrianaDaneen</td>
+      <td>Simulasi Duet Prabowo Subianto-Erick Thohir Te...</td>
+      <td>Jakarta Capital Region</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>adiojanoski</td>
-      <td>Breaking News : Prabowo Subianto kalahkan Ganj...</td>
-      <td>ÜT: -6.3480548,106.8316685</td>
+      <td>yosephrosario_</td>
+      <td>Pelajaran Hidup Prabowo Dari Para Seniornya   ...</td>
+      <td></td>
     </tr>
     <tr>
       <th>5</th>
-      <td>bachtia_nst</td>
-      <td>#Prabowo #PrabowoSubianto #MenhaPrabowo https:...</td>
-      <td>Kota Medan, Sumatera Utara</td>
+      <td>yosephrosario_</td>
+      <td>Cerita Prabowo Kapten TNI (Purn.) Abdullah Har...</td>
+      <td></td>
     </tr>
     <tr>
       <th>6</th>
-      <td>adiojanoski</td>
-      <td>Breaking News : Prabowo Subianto puji dukungan...</td>
-      <td>ÜT: -6.3480548,106.8316685</td>
+      <td>florieliciouss</td>
+      <td>@Yopiluthfi2 @Ndons_Back Dr 2014 ada gw juga y...</td>
+      <td></td>
     </tr>
     <tr>
       <th>7</th>
       <td>AdrianaDaneen</td>
-      <td>Prabowo Subianto puji dukungan Pemerintahan Jo...</td>
+      <td>Elektabilitas Gerindra Serta Prabowo Subianto ...</td>
       <td>Jakarta Capital Region</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>melysaryani</td>
-      <td>Pak Prabowo Menyampaikan : \nRendah hati\nJang...</td>
-      <td>jakarta</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>JatengTV</td>
-      <td>(03) Pemilik PT Perorangan menjadi pemeran uta...</td>
-      <td>Semarang, Jawa Tengah</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>BANGSAygSUJUD</td>
-      <td>@Bekan_Kutoanyar @yusufagro @bengkeldodo @emha...</td>
+      <td>wartaHterkini</td>
+      <td>#airlanggahartarto #golkarindonesia #koalisibe...</td>
       <td></td>
     </tr>
     <tr>
+      <th>9</th>
+      <td>AdrianaDaneen</td>
+      <td>Elektabilitas Gerindra Serta Prabowo Subianto ...</td>
+      <td>Jakarta Capital Region</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>AdrianaDaneen</td>
+      <td>52 Relawan Bersatu Menjadi BRP, Siap Menangkan...</td>
+      <td>Jakarta Capital Region</td>
+    </tr>
+    <tr>
       <th>11</th>
-      <td>RickyTamba_</td>
-      <td>Pejah gesang nderek Pak PSD08 @prabowo . Merah...</td>
-      <td>Indonesia (Id)</td>
+      <td>cikilokidog</td>
+      <td>52 Relawan Bersatu Menjadi BRP, Siap Menangkan...</td>
+      <td>Kota Bandung, Jawa Barat</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7e879260-e008-43f7-94ca-c99f7fc13f59')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-09db31a1-ae2e-460a-bd50-b4b23cc2eb1c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -610,12 +636,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7e879260-e008-43f7-94ca-c99f7fc13f59 button.colab-df-convert');
+          document.querySelector('#df-09db31a1-ae2e-460a-bd50-b4b23cc2eb1c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7e879260-e008-43f7-94ca-c99f7fc13f59');
+          const element = document.querySelector('#df-09db31a1-ae2e-460a-bd50-b4b23cc2eb1c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -665,7 +691,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c9687ca7-0e7d-4564-b8f7-c7115718d03f">
+  <div id="df-2a1bb6a4-dbd9-4665-be32-4c9dd75dfbd3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -692,58 +718,58 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   <tbody>
     <tr>
       <th>0</th>
-      <td>Kepala BNPB: 35 Warga Masih Hilang dalam Benca...</td>
-      <td>BNPB menyatakan 35 orang warga masih hilang da...</td>
+      <td>Aliansi Masyarakat Adat Nusantara Raih Skoll A...</td>
+      <td>Aliansi Masyarakat Adat Nusantara (AMAN) berh...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>BNPB Berencana Modifikasi Cuaca di Natuna untu...</td>
-      <td>BNPB menyatakan proses evakuasi korban tanah l...</td>
+      <td>Pakar Nilai Koalisi Besar Sulit Terwujud karen...</td>
+      <td>Partai-partai yang ingin membentuk koalisi bes...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>RUU Masyarakat Adat Diharapkan Segera Disahkan</td>
-      <td>Forum Diskusi Denpasar 12 edisi 140 ini membah...</td>
+      <td>Kepesertaan Program JKN Capai 90 Persen</td>
+      <td>Kehadiran program Jaminan Kesehatan Nasional (...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Fakta Baru Kasus Tabrak Lari Mahasiswi Cianjur...</td>
-      <td>Menurut Yudi, ada indikasi obstruction of just...</td>
+      <td>Bareskrim Sebut 15 Pucuk Senjata Dito Mahendra...</td>
+      <td>Bareskrim menyatakan 15 pucuk senjata Dito Mah...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Kasus Ibu Hamil Meninggal, Ombudsman Jabar Min...</td>
-      <td>Kasus kematian ibu hamil yang ditolak dirawat ...</td>
+      <td>PIT Kebijakan Strategis, Jamin Keberlajutan Us...</td>
+      <td>Kebijakan PIT untuk memberikan titik optimum b...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Dewan Pers akan Godok Regulasi Perlindungan Pe...</td>
-      <td>Ketua Dewan Pers Ninik Rahayu meminta pejabat ...</td>
+      <td>Dito Mahendra Simpan 15 Pucuk Senjata Api, Pol...</td>
+      <td>Dittipidter Bareskrim Brigjen Djuhandhani meng...</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Menko Airlangga Ajak Investor Tanamkan Modal D...</td>
-      <td>Dalam mendorong percepatan pemulihan ekonomi n...</td>
+      <td>Endar Priantoro Laporkan Firli Bahuri ke Dewas...</td>
+      <td>Mantan Ketua Wadah Pegawai KPK Yudi Purnomo Ha...</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Punya Saham di Perusahaan Rafael Alun, Kepala ...</td>
-      <td>PPATK menyebut Rafael Alun diduga menggunakan ...</td>
+      <td>Lestari Moerdijat Minta Gerakan Pemeriksaan Ke...</td>
+      <td>Banyak masalah yang bisa diatasi dari upaya pe...</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>Ini Alasan Panglima TNI Yudo Margono Tak Kerah...</td>
-      <td>Panglima TNI Laksamana Yudo Margono mengungkap...</td>
+      <td>Bamsot Dukung Langkah PFN Buat Film tentang In...</td>
+      <td>Selain dibuat dalam bentuk film, "Indonesia No...</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Panglima TNI Tolak Bantuan Selandia Baru untuk...</td>
-      <td>TNi dan Polri tetap bergerak hati-hati meninda...</td>
+      <td>Ini Alasan AHY Duga Moeldoko Ingin Jegal Penca...</td>
+      <td>AHY mengungkapkan alasan dugaan Moeldoko ingin...</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c9687ca7-0e7d-4564-b8f7-c7115718d03f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2a1bb6a4-dbd9-4665-be32-4c9dd75dfbd3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -794,12 +820,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c9687ca7-0e7d-4564-b8f7-c7115718d03f button.colab-df-convert');
+          document.querySelector('#df-2a1bb6a4-dbd9-4665-be32-4c9dd75dfbd3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c9687ca7-0e7d-4564-b8f7-c7115718d03f');
+          const element = document.querySelector('#df-2a1bb6a4-dbd9-4665-be32-4c9dd75dfbd3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -833,33 +859,31 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create an object HTTPresponse</span>
-<span class="k">def</span> <span class="nf">Data_PTA</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">DataPTA</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
   <span class="k">global</span> <span class="n">hades</span>
   <span class="n">data</span><span class="o">=</span><span class="p">[]</span>
   <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">page</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-      <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">p</span><span class="o">==</span><span class="mi">1</span> <span class="p">:</span>
+      <span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10/&quot;</span>
+    <span class="k">else</span> <span class="p">:</span>
       <span class="n">URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10/</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span>
-      <span class="n">request</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-      <span class="c1">#create var bs yang menyimpan data request berupa html</span>
-      <span class="c1">#var bs yang menyimpan data request</span>
-      <span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
-      <span class="n">prodi</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span><span class="s1">&#39;begin&#39;</span><span class="p">})</span>
-      <span class="k">for</span> <span class="n">pro</span> <span class="ow">in</span> <span class="n">prodi</span><span class="p">:</span>
-        <span class="n">prod</span> <span class="o">=</span> <span class="n">pro</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-      <span class="n">jur</span> <span class="o">=</span> <span class="n">prod</span><span class="p">[</span><span class="o">-</span><span class="mi">18</span><span class="p">:]</span>
-      <span class="n">ul</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">,</span> <span class="s1">&#39;items list_style&#39;</span><span class="p">)</span>
-      <span class="n">li</span> <span class="o">=</span> <span class="n">ul</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;data-id&#39;</span><span class="p">:</span><span class="s1">&#39;id-1&#39;</span><span class="p">})</span>
-      <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
-        <span class="n">link</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
-        <span class="n">request2</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-        <span class="n">soup2</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request2</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
-        <span class="n">abstrak</span><span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,{</span><span class="s1">&#39;align&#39;</span><span class="p">:</span><span class="s1">&#39;justify&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-        <span class="c1"># print(abstrak)</span>
-        <span class="n">NPM</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">12</span><span class="p">:]</span>
-        <span class="n">headline</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-        <span class="c1"># prodi = x.find(&#39;h2&#39;)</span>
-        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">NPM</span><span class="p">,</span><span class="n">headline</span><span class="p">,</span><span class="n">abstrak</span><span class="p">,</span><span class="n">jur</span><span class="p">])</span>
-        <span class="c1"># print(NPM)</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="c1">#var bs yang menyimpan data request berupa html</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+    <span class="n">prodi</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span><span class="s1">&#39;begin&#39;</span><span class="p">})</span>
+    <span class="k">for</span> <span class="n">pro</span> <span class="ow">in</span> <span class="n">prodi</span><span class="p">:</span>
+      <span class="n">prod</span> <span class="o">=</span> <span class="n">pro</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">jur</span> <span class="o">=</span> <span class="n">prod</span><span class="p">[</span><span class="o">-</span><span class="mi">18</span><span class="p">:]</span>
+    <span class="n">ul</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">,</span> <span class="s1">&#39;items list_style&#39;</span><span class="p">)</span>
+    <span class="n">li</span> <span class="o">=</span> <span class="n">ul</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;data-id&#39;</span><span class="p">:</span><span class="s1">&#39;id-1&#39;</span><span class="p">})</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+      <span class="n">link</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+      <span class="n">request2</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+      <span class="n">soup2</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request2</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+      <span class="n">abst</span><span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,{</span><span class="s1">&#39;align&#39;</span><span class="p">:</span><span class="s1">&#39;justify&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+      <span class="n">NPM</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">12</span><span class="p">:]</span>
+      <span class="n">headline</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+      <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">NPM</span><span class="p">,</span><span class="n">headline</span><span class="p">,</span><span class="n">abst</span><span class="p">,</span><span class="n">jur</span><span class="p">])</span>
   <span class="k">return</span> <span class="n">data</span>
 </pre></div>
 </div>
@@ -867,7 +891,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">Data_PTA</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">DataPTA</span><span class="p">(</span><span class="mi">172</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">result</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NPM&quot;</span><span class="p">,</span> <span class="s2">&quot;Judul&quot;</span><span class="p">,</span><span class="s2">&quot;Abstrak&quot;</span><span class="p">,</span><span class="s2">&quot;Prodi&quot;</span><span class="p">]</span>
 <span class="n">result</span>
@@ -875,131 +899,124 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">75</span><span class="n">b4956b0759</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="o">=</span><span class="n">Data_PTA</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nn">&lt;ipython-input-8-458bb241435f&gt;</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="o">=</span><span class="n">DataPTA</span><span class="p">(</span><span class="mi">172</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">result</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NPM&quot;</span><span class="p">,</span> <span class="s2">&quot;Judul&quot;</span><span class="p">,</span><span class="s2">&quot;Abstrak&quot;</span><span class="p">,</span><span class="s2">&quot;Prodi&quot;</span><span class="p">]</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">result</span>
 
-<span class="nn">&lt;ipython-input-7-ff8a14844d17&gt;</span> in <span class="ni">Data_PTA</span><span class="nt">(page)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>       <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>         <span class="n">link</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
-<span class="ne">---&gt; </span><span class="mi">20</span>         <span class="n">request2</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>         <span class="n">soup2</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request2</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>         <span class="n">abstrak</span><span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,{</span><span class="s1">&#39;align&#39;</span><span class="p">:</span><span class="s1">&#39;justify&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nn">&lt;ipython-input-7-df3b01fb2fc3&gt;</span> in <span class="ni">DataPTA</span><span class="nt">(page)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>       <span class="n">link</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">21</span>       <span class="n">request2</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>       <span class="n">soup2</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request2</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>       <span class="n">abst</span><span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,{</span><span class="s1">&#39;align&#39;</span><span class="p">:</span><span class="s1">&#39;justify&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span> 
-<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;allow_redirects&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">76</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span> 
-<span class="g g-Whitespace">     </span><span class="mi">78</span> 
+<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">75</span><span class="s2">     return request(&#39;get&#39;, url, params=params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span><span class="s2"> </span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="c1"># cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">61</span>         <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> 
-<span class="g g-Whitespace">     </span><span class="mi">63</span> 
+<span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">     # cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2">     with sessions.Session() as session:</span>
+<span class="ne">---&gt; </span><span class="mi">61</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="s2"> </span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">540</span>         <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">541</span>         <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">542</span>         <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">543</span> 
-<span class="g g-Whitespace">    </span><span class="mi">544</span>         <span class="k">return</span> <span class="n">resp</span>
+<span class="g g-Whitespace">    </span><span class="mi">527</span><span class="s2">         }</span>
+<span class="g g-Whitespace">    </span><span class="mi">528</span><span class="s2">         send_kwargs.update(settings)</span>
+<span class="ne">--&gt; </span><span class="mi">529</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span><span class="s2">         return resp</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span> 
-<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">655</span>         <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span> 
-<span class="g g-Whitespace">    </span><span class="mi">657</span>         <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span><span class="s2">         # Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">645</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">437</span>         <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">438</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">chunked</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">439</span>                 <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">440</span>                     <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">441</span>                     <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span><span class="s2">             if not chunked:</span>
+<span class="ne">--&gt; </span><span class="mi">440</span><span class="s2">                 resp = conn.urlopen(</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span><span class="s2">                     method=request.method,</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="s2">                     url=url,</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> 
-<span class="g g-Whitespace">    </span><span class="mi">702</span>             <span class="c1"># Make the request on the httplib connection object.</span>
-<span class="ne">--&gt; </span><span class="mi">703</span>             <span class="n">httplib_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>                 <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>                 <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">             # Make the request on the httplib connection object.</span>
+<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">             httplib_response = self._make_request(</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">                 conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">                 method,</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span>                     <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>                     <span class="c1"># Otherwise it looks like a bug in the code.</span>
-<span class="ne">--&gt; </span><span class="mi">449</span>                     <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">,</span> <span class="n">SocketError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">384</span><span class="s2">         # Trigger any extra validation we need to do.</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">386</span><span class="s2">             self._validate_conn(conn)</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span><span class="s2">         except (SocketTimeout, BaseSSLError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span><span class="s2">             # Py2 raises this as a BaseSSLError, Py3 raises it as socket timeout.</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span><span class="s2">         # Force connect early to allow us to validate the connection.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span><span class="s2">         if not getattr(conn, &quot;sock&quot;, None):  # AppEngine might not have  `.sock`</span>
+<span class="ne">-&gt; </span><span class="mi">1042</span><span class="s2">             conn.connect()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1044</span><span class="s2">         if not conn.is_verified:</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span>                 <span class="c1"># Python 3</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span>                 <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">444</span>                     <span class="n">httplib_response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span>                 <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span>                     <span class="c1"># Remove the TypeError from the exception chain in</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/snscrape/base.py</span> in <span class="ni">connect</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="s2"> class _HTTPSConnection(urllib3.connection.HTTPSConnection):</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span><span class="s2">         def connect(self, *args, **kwargs):</span>
+<span class="ne">--&gt; </span><span class="mi">141</span><span class="s2">                 conn = super().connect(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span><span class="s2">                 #FIXME: Uses undocumented attribute self.sock and beyond.</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span><span class="s2">                 try:</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span>         <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1377</span>                 <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span>             <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1379</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">417</span><span class="s2">             context.load_default_certs()</span>
+<span class="g g-Whitespace">    </span><span class="mi">418</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">419</span><span class="s2">         self.sock = ssl_wrap_socket(</span>
+<span class="g g-Whitespace">    </span><span class="mi">420</span><span class="s2">             sock=conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">421</span><span class="s2">             keyfile=self.key_file,</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span>         <span class="c1"># read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">320</span>             <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>             <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span>                 <span class="k">break</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py</span> in <span class="ni">ssl_wrap_socket</span><span class="nt">(sock, keyfile, certfile, cert_reqs, ca_certs, server_hostname, ssl_version, ciphers, ssl_context, ca_cert_dir, key_password, ca_cert_data, tls_in_tls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">     if send_sni:</span>
+<span class="ne">--&gt; </span><span class="mi">449</span><span class="s2">         ssl_sock = _ssl_wrap_socket_impl(</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span><span class="s2">             sock, context, tls_in_tls, server_hostname=server_hostname</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span><span class="s2">         )</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> 
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">def</span> <span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">281</span>         <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span>             <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py</span> in <span class="ni">_ssl_wrap_socket_impl</span><span class="nt">(sock, ssl_context, tls_in_tls, server_hostname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span><span class="s2">     if server_hostname:</span>
+<span class="ne">--&gt; </span><span class="mi">493</span><span class="s2">         return ssl_context.wrap_socket(sock, server_hostname=server_hostname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span><span class="s2">     else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span><span class="s2">         return ssl_context.wrap_socket(sock)</span>
 
-<span class="nn">/usr/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">704</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>             <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">wrap_socket</span><span class="nt">(self, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, session)</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span><span class="s2">         # SSLSocket class handles server_hostname encoding before it calls</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span><span class="s2">         # ctx._wrap_socket()</span>
+<span class="ne">--&gt; </span><span class="mi">501</span><span class="s2">         return self.sslsocket_class._create(</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span><span class="s2">             sock=sock,</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span><span class="s2">             server_side=server_side,</span>
 
-<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1240</span>                   <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1241</span>                   <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1242</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1243</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1244</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">_create</span><span class="nt">(cls, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, context, session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span><span class="s2">                         # non-blocking</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span><span class="s2">                         raise ValueError(&quot;do_handshake_on_connect should not be specified for non-blocking sockets&quot;)</span>
+<span class="ne">-&gt; </span><span class="mi">1041</span><span class="s2">                     self.do_handshake()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span><span class="s2">             except (OSError, ValueError):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span><span class="s2">                 self.close()</span>
 
-<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span>         <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1099</span>             <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1100</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1101</span>             <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1102</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">do_handshake</span><span class="nt">(self, block)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1308</span><span class="s2">             if timeout == 0.0 and block:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1309</span><span class="s2">                 self.settimeout(None)</span>
+<span class="ne">-&gt; </span><span class="mi">1310</span><span class="s2">             self._sslobj.do_handshake()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1311</span><span class="s2">         finally:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1312</span><span class="s2">             self.settimeout(timeout)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1008,7 +1025,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;pta_infor.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># result.to_csv(&#39;pta_infor.csv&#39;, index=False)</span>
+<span class="n">result</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;pta_infor.xlsx&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2139,6 +2157,917 @@ Successfully installed joblib-1.2.0 scikit-learn-1.2.1 scipy-1.10.1 threadpoolct
 <p>Penjelasan
 pertama memisahkan 4 data sesuai ketentuan setelah itu dari 4 database yang berbeda kemudian dijadikan satu menggunakan perintah pd.concat kemudian menghapus kolom-kolom id yang tidak digunakan setelah semua kolom telah di prepocessing kemudian dimasukkan membagi data dengan data test dan data training setelah itu masukkan model DecisionTreeClassifier dan menghitung akurasinya untuk model yang kedua yaitu KNeighborsClassifier dan menghitung akurasinya</p>
 </div>
+<div class="section" id="tugas-5">
+<h2>[Tugas 5]<a class="headerlink" href="#tugas-5" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">decomposition</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+
+<span class="c1"># unused but required import for doing 3d projections with matplotlib &lt; 3.2</span>
+<span class="kn">import</span> <span class="nn">mpl_toolkits.mplot3d</span>  <span class="c1"># noqa: F401</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">,</span> <span class="n">elev</span><span class="o">=</span><span class="mi">48</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">134</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">cla</span><span class="p">()</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">decomposition</span><span class="o">.</span><span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">&quot;Setosa&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Versicolour&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Virginica&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text3D</span><span class="p">(</span>
+        <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">label</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">label</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">,</span>
+        <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">label</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="n">name</span><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+        <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="c1"># Reorder the labels to have colors matching the cluster results</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">choose</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">nipy_spectral</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">zaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9641852f035a7de39c137fe061a56c03b31c79ada1ad02d2f9528f53b059c68b.png" src="_images/9641852f035a7de39c137fe061a56c03b31c79ada1ad02d2f9528f53b059c68b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the dataset</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+ 
+<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.5, 2.4, 3.7, 1. ],
+       [5.7, 2.8, 4.1, 1.3],
+       [6. , 2.2, 5. , 1.5],
+       [4.8, 3. , 1.4, 0.1]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">expit</span>
+ 
+<span class="n">model</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;lbfgs&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># magic code</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+ 
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+ 
+<span class="c1"># Transofm the iris data to just 2 dimensions</span>
+<span class="n">iris_red</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">iris_red</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.18962247, -0.68028676],
+       [ 0.29900084, -0.34889781],
+       [ 1.30079171, -0.76114964],
+       [-2.78610927, -0.235112  ]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now, let&#39;s fit the model with just these 2 variables.</span>
+<span class="n">model_red</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;lbfgs&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+ 
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_train</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X_train</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">c</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f5de1c9d880&gt;
+</pre></div>
+</div>
+<img alt="_images/94129dcd141411fb07e6367a2df7e3e218b81ccc69e0e82e48de4258c8dcaa7a.png" src="_images/94129dcd141411fb07e6367a2df7e3e218b81ccc69e0e82e48de4258c8dcaa7a.png" />
+</div>
+</div>
+</div>
+<div class="section" id="tugas-6-data-time-saries">
+<h2>[Tugas 6] Data Time Saries<a class="headerlink" href="#tugas-6-data-time-saries" title="Permalink to this heading">#</a></h2>
+<div class="section" id="get-and-prepare-data">
+<h3>Get and prepare Data<a class="headerlink" href="#get-and-prepare-data" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jbrownlee/Datasets/master/airline-passengers.csv&#39;</span><span class="p">)</span>
+<span class="n">df_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d0ff18ec-a906-42fa-9a76-043ee0f5ca62">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Month</th>
+      <th>Passengers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1949-01</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1949-02</td>
+      <td>118</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1949-03</td>
+      <td>132</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1949-04</td>
+      <td>129</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1949-05</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1949-06</td>
+      <td>135</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1949-07</td>
+      <td>148</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d0ff18ec-a906-42fa-9a76-043ee0f5ca62')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-d0ff18ec-a906-42fa-9a76-043ee0f5ca62 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-d0ff18ec-a906-42fa-9a76-043ee0f5ca62');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(144, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_passenger</span><span class="o">=</span> <span class="n">df_data</span><span class="p">[</span><span class="s1">&#39;Passengers&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># transform univariate time series to supervised learning problem</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
+<span class="c1"># split a univariate sequence into samples</span>
+<span class="k">def</span> <span class="nf">split_sequence</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)):</span>
+    <span class="c1"># find the end of this pattern</span>
+        <span class="n">end_ix</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n_steps</span>
+    <span class="c1"># check if we are beyond the sequence</span>
+        <span class="k">if</span> <span class="n">end_ix</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="c1"># gather input and output parts of the pattern</span>
+        <span class="c1"># print(i, end_ix)</span>
+        <span class="n">seq_x</span><span class="p">,</span> <span class="n">seq_y</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">end_ix</span><span class="p">],</span> <span class="n">sequence</span><span class="p">[</span><span class="n">end_ix</span><span class="p">]</span>
+        <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq_x</span><span class="p">)</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq_y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">array</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tuning-data">
+<h3>tuning data<a class="headerlink" href="#tuning-data" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">split_sequence</span><span class="p">(</span><span class="n">df_passenger</span><span class="p">,</span> <span class="n">n_steps</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(142, 2) (142,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># column names to X and y data frames</span>
+<span class="n">df_X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;t-&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)])</span>
+<span class="n">df_y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;t+1 (prediction)&#39;</span><span class="p">])</span>
+
+<span class="c1"># concat df_X and df_y</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_X</span><span class="p">,</span> <span class="n">df_y</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_X.head()</span>
+<span class="c1"># df_y.head()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>t-1</th>
+      <th>t-0</th>
+      <th>t+1 (prediction)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>112</td>
+      <td>118</td>
+      <td>132</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>118</td>
+      <td>132</td>
+      <td>129</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>132</td>
+      <td>129</td>
+      <td>121</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="prepo">
+<h3>prepo<a class="headerlink" href="#prepo" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="n">scaler</span><span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">X_norm</span><span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_X</span><span class="p">)</span>
+<span class="c1"># y_norm= scaler.fit_transform(df_y)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_norm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.01544402, 0.02702703],
+       [0.02702703, 0.05405405],
+       [0.05405405, 0.04826255],
+       [0.04826255, 0.03281853],
+       [0.03281853, 0.05984556],
+       [0.05984556, 0.08494208],
+       [0.08494208, 0.08494208],
+       [0.08494208, 0.06177606],
+       [0.06177606, 0.02895753],
+       [0.02895753, 0.        ],
+       [0.        , 0.02702703],
+       [0.02702703, 0.02123552],
+       [0.02123552, 0.04247104],
+       [0.04247104, 0.07142857],
+       [0.07142857, 0.05984556],
+       [0.05984556, 0.04054054],
+       [0.04054054, 0.08687259],
+       [0.08687259, 0.12741313],
+       [0.12741313, 0.12741313],
+       [0.12741313, 0.1042471 ],
+       [0.1042471 , 0.05598456],
+       [0.05598456, 0.01930502],
+       [0.01930502, 0.06949807],
+       [0.06949807, 0.07915058],
+       [0.07915058, 0.08880309],
+       [0.08880309, 0.14285714],
+       [0.14285714, 0.11389961],
+       [0.11389961, 0.13127413],
+       [0.13127413, 0.14285714],
+       [0.14285714, 0.18339768],
+       [0.18339768, 0.18339768],
+       [0.18339768, 0.15444015],
+       [0.15444015, 0.11196911],
+       [0.11196911, 0.08108108],
+       [0.08108108, 0.11969112],
+       [0.11969112, 0.12934363],
+       [0.12934363, 0.14671815],
+       [0.14671815, 0.17181467],
+       [0.17181467, 0.14864865],
+       [0.14864865, 0.15250965],
+       [0.15250965, 0.22007722],
+       [0.22007722, 0.24324324],
+       [0.24324324, 0.26640927],
+       [0.26640927, 0.2027027 ],
+       [0.2027027 , 0.16795367],
+       [0.16795367, 0.13127413],
+       [0.13127413, 0.17374517],
+       [0.17374517, 0.17760618],
+       [0.17760618, 0.17760618],
+       [0.17760618, 0.25482625],
+       [0.25482625, 0.25289575],
+       [0.25289575, 0.24131274],
+       [0.24131274, 0.26833977],
+       [0.26833977, 0.30888031],
+       [0.30888031, 0.32432432],
+       [0.32432432, 0.25675676],
+       [0.25675676, 0.20656371],
+       [0.20656371, 0.14671815],
+       [0.14671815, 0.18725869],
+       [0.18725869, 0.19305019],
+       [0.19305019, 0.16216216],
+       [0.16216216, 0.25289575],
+       [0.25289575, 0.23745174],
+       [0.23745174, 0.25096525],
+       [0.25096525, 0.30888031],
+       [0.30888031, 0.38223938],
+       [0.38223938, 0.36486486],
+       [0.36486486, 0.2992278 ],
+       [0.2992278 , 0.24131274],
+       [0.24131274, 0.19111969],
+       [0.19111969, 0.24131274],
+       [0.24131274, 0.26640927],
+       [0.26640927, 0.24903475],
+       [0.24903475, 0.31467181],
+       [0.31467181, 0.31853282],
+       [0.31853282, 0.32046332],
+       [0.32046332, 0.40733591],
+       [0.40733591, 0.5019305 ],
+       [0.5019305 , 0.46911197],
+       [0.46911197, 0.4015444 ],
+       [0.4015444 , 0.32818533],
+       [0.32818533, 0.25675676],
+       [0.25675676, 0.33590734],
+       [0.33590734, 0.34749035],
+       [0.34749035, 0.33397683],
+       [0.33397683, 0.41119691],
+       [0.41119691, 0.4034749 ],
+       [0.4034749 , 0.41312741],
+       [0.41312741, 0.52123552],
+       [0.52123552, 0.5965251 ],
+       [0.5965251 , 0.58108108],
+       [0.58108108, 0.48455598],
+       [0.48455598, 0.38996139],
+       [0.38996139, 0.32239382],
+       [0.32239382, 0.38996139],
+       [0.38996139, 0.40733591],
+       [0.40733591, 0.38030888],
+       [0.38030888, 0.48648649],
+       [0.48648649, 0.47104247],
+       [0.47104247, 0.48455598],
+       [0.48455598, 0.61389961],
+       [0.61389961, 0.6969112 ],
+       [0.6969112 , 0.7007722 ],
+       [0.7007722 , 0.57915058],
+       [0.57915058, 0.46911197],
+       [0.46911197, 0.38803089],
+       [0.38803089, 0.44787645],
+       [0.44787645, 0.45559846],
+       [0.45559846, 0.41312741],
+       [0.41312741, 0.4980695 ],
+       [0.4980695 , 0.47104247],
+       [0.47104247, 0.5       ],
+       [0.5       , 0.63899614],
+       [0.63899614, 0.74710425],
+       [0.74710425, 0.77413127],
+       [0.77413127, 0.57915058],
+       [0.57915058, 0.49227799],
+       [0.49227799, 0.3976834 ],
+       [0.3976834 , 0.44980695],
+       [0.44980695, 0.49420849],
+       [0.49420849, 0.45945946],
+       [0.45945946, 0.58301158],
+       [0.58301158, 0.56370656],
+       [0.56370656, 0.61003861],
+       [0.61003861, 0.71042471],
+       [0.71042471, 0.85714286],
+       [0.85714286, 0.87837838],
+       [0.87837838, 0.69305019],
+       [0.69305019, 0.58494208],
+       [0.58494208, 0.4980695 ],
+       [0.4980695 , 0.58108108],
+       [0.58108108, 0.6042471 ],
+       [0.6042471 , 0.55405405],
+       [0.55405405, 0.60810811],
+       [0.60810811, 0.68918919],
+       [0.68918919, 0.71042471],
+       [0.71042471, 0.83204633],
+       [0.83204633, 1.        ],
+       [1.        , 0.96911197],
+       [0.96911197, 0.77992278],
+       [0.77992278, 0.68918919],
+       [0.68918919, 0.55212355]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="split-data">
+<h3>Split data<a class="headerlink" href="#split-data" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_norm</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="model">
+<h3>model<a class="headerlink" href="#model" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import knn</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<span class="n">model_knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fit-and-predict-knn">
+<h3>fit and predict knn<a class="headerlink" href="#fit-and-predict-knn" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span><span class="o">=</span><span class="n">model_knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mse">
+<h3>mse<a class="headerlink" href="#mse" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ \text{MSE} = \frac{1}{n} \sum_{i=0}^n (y_i - \hat{y}_i)^2\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2207.5363984674336
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="result">
+<h3>result<a class="headerlink" href="#result" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(29,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(29,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_y_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;y_test&#39;</span><span class="p">])</span>
+<span class="n">df_y_pred</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">])</span>
+
+<span class="n">df_hasil</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_y_test</span><span class="p">,</span> <span class="n">df_y_pred</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_hasil</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>y_test</th>
+      <th>y_pred</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>194</td>
+      <td>163.666667</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>203</td>
+      <td>252.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>170</td>
+      <td>143.666667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>180</td>
+      <td>221.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>145</td>
+      <td>137.333333</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>119</td>
+      <td>125.000000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>318</td>
+      <td>375.333333</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>390</td>
+      <td>448.666667</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>318</td>
+      <td>343.666667</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>465</td>
+      <td>434.666667</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>306</td>
+      <td>241.666667</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>463</td>
+      <td>595.666667</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>104</td>
+      <td>141.333333</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>355</td>
+      <td>360.333333</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>461</td>
+      <td>507.000000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>166</td>
+      <td>127.666667</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>277</td>
+      <td>274.000000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>317</td>
+      <td>271.333333</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>404</td>
+      <td>520.333333</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>178</td>
+      <td>144.666667</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>264</td>
+      <td>223.666667</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>313</td>
+      <td>324.000000</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>235</td>
+      <td>199.666667</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>172</td>
+      <td>153.000000</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>234</td>
+      <td>246.333333</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>158</td>
+      <td>185.666667</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>269</td>
+      <td>286.000000</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>336</td>
+      <td>294.000000</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>172</td>
+      <td>182.333333</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df_hasil.to_excel(&#39;df_hasil n_step={}.xlsx&#39;.format(n_steps), index=False)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>104
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>622
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -2167,7 +3096,10 @@ pertama memisahkan 4 data sesuai ketentuan setelah itu dari 4 database yang berb
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -2178,7 +3110,10 @@ pertama memisahkan 4 data sesuai ketentuan setelah itu dari 4 database yang berb
         <p class="prev-next-title">Welcome to Project Sains Data</p>
       </div>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -2197,6 +3132,18 @@ pertama memisahkan 4 data sesuai ketentuan setelah itu dari 4 database yang berb
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-2-crawling-data-berita">[Tugas 2] Crawling Data Berita</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-3-crawling-data-pta-trunojoyo">[ Tugas 3] Crawling Data PTA Trunojoyo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-4">[Tugas 4]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-5">[Tugas 5]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-6-data-time-saries">[Tugas 6] Data Time Saries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-and-prepare-data">Get and prepare Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-data">tuning data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepo">prepo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model">model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-and-predict-knn">fit and predict knn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mse">mse</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result">result</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -2205,7 +3152,7 @@ pertama memisahkan 4 data sesuai ketentuan setelah itu dari 4 database yang berb
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -2235,7 +3182,7 @@ By 20-174_NurulFaizah
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -2244,8 +3191,8 @@ By 20-174_NurulFaizah
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
