@@ -157,9 +157,6 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Project Sains Data</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">UTS</a></li>
-
-
-
 </ul>
 
     </div>
@@ -384,19 +381,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UTS</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbol-punctuation-removal-case-folding">1. Symbol &amp; Punctuation Removal, case folding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">2. Word Normalization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing">3. Tokenizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal">4. Stopwords Removal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">5. Stemming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbol-punctuation-removal-case-folding">1. Symbol &amp; Punctuation Removal, case folding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">2. Word Normalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing">3. Tokenizing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal">4. Stopwords Removal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">5. Stemming</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -411,9 +406,8 @@ document.write(`
 <h1>UTS<a class="headerlink" href="#uts" title="Permalink to this heading">#</a></h1>
 <p>Nurul Faizah</p>
 <p>200411100174</p>
-</div>
 <div class="section" id="load-data">
-<h1>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h1>
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -830,9 +824,9 @@ Name: Label, dtype: int64
 </div>
 </div>
 <div class="section" id="preprocessing">
-<h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h1>
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h2>
 <div class="section" id="symbol-punctuation-removal-case-folding">
-<h2>1. Symbol &amp; Punctuation Removal, case folding<a class="headerlink" href="#symbol-punctuation-removal-case-folding" title="Permalink to this heading">#</a></h2>
+<h3>1. Symbol &amp; Punctuation Removal, case folding<a class="headerlink" href="#symbol-punctuation-removal-case-folding" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses menghilangkan simbol dan emoji</span>
@@ -956,7 +950,7 @@ Name: Abstrak, Length: 810, dtype: object
 </div>
 </div>
 <div class="section" id="word-normalization">
-<h2>2. Word Normalization<a class="headerlink" href="#word-normalization" title="Permalink to this heading">#</a></h2>
+<h3>2. Word Normalization<a class="headerlink" href="#word-normalization" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses tokenisasi</span>
@@ -1039,10 +1033,10 @@ Name: comment_normalize, dtype: object
 </div>
 </div>
 <div class="section" id="tokenizing">
-<h2>3. Tokenizing<a class="headerlink" href="#tokenizing" title="Permalink to this heading">#</a></h2>
+<h3>3. Tokenizing<a class="headerlink" href="#tokenizing" title="Permalink to this heading">#</a></h3>
 </div>
 <div class="section" id="stopwords-removal">
-<h2>4. Stopwords Removal<a class="headerlink" href="#stopwords-removal" title="Permalink to this heading">#</a></h2>
+<h3>4. Stopwords Removal<a class="headerlink" href="#stopwords-removal" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Stopword Removal</span>
@@ -1061,7 +1055,7 @@ Name: comment_normalize, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data]   Package stopwords is already up-to-date!
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [sistem, informasi, akademik, siakad, sistem, ...
@@ -1139,7 +1133,7 @@ Name: stopwords_removal_final, dtype: object
 </div>
 </div>
 <div class="section" id="stemming">
-<h2>5. Stemming<a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h2>
+<h3>5. Stemming<a class="headerlink" href="#stemming" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#proses stem</span>
@@ -6616,7 +6610,7 @@ Name: stemming, Length: 810, dtype: object
 </div>
 </div>
 <div class="section" id="word-embedding-word2vec-cbow">
-<h1>Word Embedding Word2vec CBOW<a class="headerlink" href="#word-embedding-word2vec-cbow" title="Permalink to this heading">#</a></h1>
+<h2>Word Embedding Word2vec CBOW<a class="headerlink" href="#word-embedding-word2vec-cbow" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gensim</span>
@@ -6669,6 +6663,7 @@ Cosine similarity between &#39;teknologi&#39; and &#39;mobile&#39; - CBOW :  0.9
  (&#39;reality&#39;, 0.9931536912918091),
  (&#39;bas&#39;, 0.9926796555519104)]
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -6732,19 +6727,17 @@ Cosine similarity between &#39;teknologi&#39; and &#39;mobile&#39; - CBOW :  0.9
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UTS</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbol-punctuation-removal-case-folding">1. Symbol &amp; Punctuation Removal, case folding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">2. Word Normalization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing">3. Tokenizing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal">4. Stopwords Removal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">5. Stemming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbol-punctuation-removal-case-folding">1. Symbol &amp; Punctuation Removal, case folding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#word-normalization">2. Word Normalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenizing">3. Tokenizing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-removal">4. Stopwords Removal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming">5. Stemming</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
