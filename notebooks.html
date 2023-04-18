@@ -416,12 +416,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-8-graph">[Tugas 8] GRAPH</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank">PageRank</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank-berarah">PAGERANK BERARAH</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-0">Iterasi 0:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-1">Iterasi 1:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-2">Iterasi 2:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-3">Iterasi 3:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">PageRank</a></li>
-</ul>
-</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extractive-summarizer">EXTRACTIVE SUMMARIZER</a></li>
 </ul>
 </li>
@@ -448,17 +444,26 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.2.20230320)
-Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
-Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.11.0)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
+  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 kB</span> <span class=" -Color -Color-Red">2.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.11.0)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
+Successfully installed snscrape-0.6.2.20230320
 </pre></div>
 </div>
 </div>
@@ -499,8 +504,8 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "d514182d42804c3f9790eafcce531ee1"}</script><div class="output text_html">
-  <div id="df-99409304-bb16-45ea-9a7e-77a12ba79e87">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "74c71053beca437a98d996811b6b4530"}</script><div class="output text_html">
+  <div id="df-7e1ca636-5d70-485e-b930-9bf695a9818b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -528,80 +533,80 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   <tbody>
     <tr>
       <th>0</th>
-      <td>bengkeldodo</td>
-      <td>@BANGSAygSUJUD @Gerindra @prabowo @azissubekti...</td>
-      <td>Kebumen, Indonesia</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>bengkeldodo</td>
-      <td>Jangan ngawur kamu lah nanti malah blunder .. ...</td>
-      <td>Kebumen, Indonesia</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>HerrihermantoSp</td>
-      <td>Capres abadi #prabowo #PrabowoSubianto https:/...</td>
-      <td>negri laskar pelangi bangka</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>HerrihermantoSp</td>
-      <td>Menolak lupa  #prabowo #PrabowoSubianto https:...</td>
-      <td>negri laskar pelangi bangka</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>HerrihermantoSp</td>
-      <td>Capres abadi #prabowo #PrabowoSubianto https:/...</td>
-      <td>negri laskar pelangi bangka</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>HerrihermantoSp</td>
-      <td>Menolak lupa  #prabowo #PrabowoSubianto https:...</td>
-      <td>negri laskar pelangi bangka</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>BANGSAygSUJUD</td>
-      <td>@partai_bermoral @prabowo @Gerindra @Kimberley...</td>
+      <td>yantanu2_08</td>
+      <td>PENDUKUNG #prabowo tidak ada yang serang ET, \...</td>
       <td></td>
     </tr>
     <tr>
+      <th>1</th>
+      <td>marcobalondoyah</td>
+      <td>Prabowo tidak pantas jadi Presiden #PrabowoSub...</td>
+      <td>DKI JAKARTA</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>marcobalondoyah</td>
+      <td>Prabowo pelanggar HAM Berat #PrabowoSubianto #...</td>
+      <td>DKI JAKARTA</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>marcobalondoyah</td>
+      <td>Sosok Prabowo tidak bisa lepas dari pelanggara...</td>
+      <td>DKI JAKARTA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>marcobalondoyah</td>
+      <td>Kejahatan HAM yang dilakukan Prabowo #PrabowoS...</td>
+      <td>DKI JAKARTA</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>marcobalondoyah</td>
+      <td>Kasian nih sama Prabowo #PrabowoSubianto #Prab...</td>
+      <td>DKI JAKARTA</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>marcobalondoyah</td>
+      <td>Bayang bayang kejahatan HAM antara Prabowo dan...</td>
+      <td>DKI JAKARTA</td>
+    </tr>
+    <tr>
       <th>7</th>
-      <td>bengkeldodo</td>
-      <td>@esti_upay @Abahpurwa1 @aqua_gak @BellaAlfita ...</td>
-      <td>Kebumen, Indonesia</td>
+      <td>marcobalondoyah</td>
+      <td>Prabowo Jenderal Kardus #PrabowoSubianto #Prab...</td>
+      <td>DKI JAKARTA</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>BerkibarMerPut</td>
-      <td>Prabowo tidak pantas jadi Presiden #PrabowoSub...</td>
-      <td>Indonesia</td>
+      <td>marcobalondoyah</td>
+      <td>Prabowo Subianto korupsi proyek pengadaan Kapa...</td>
+      <td>DKI JAKARTA</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>BerkibarMerPut</td>
-      <td>Prabowo pelanggar HAM Berat #PrabowoSubianto #...</td>
-      <td>Indonesia</td>
+      <td>dekade_08</td>
+      <td>Ada beberapa alasan mengapa koalisi kebangsaan...</td>
+      <td>DKI Jakarta, Indonesia</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>BerkibarMerPut</td>
-      <td>Sosok Prabowo tidak bisa lepas dari pelanggara...</td>
-      <td>Indonesia</td>
+      <td>Kenikir27</td>
+      <td>@AndreasSolusi @Maudy_Kadrun @genx36545403 @BA...</td>
+      <td>Duren Sawit, DKI, Indonesia</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>BerkibarMerPut</td>
-      <td>Kejahatan HAM yang dilakukan Prabowo #PrabowoS...</td>
-      <td>Indonesia</td>
+      <td>SitaAlfina</td>
+      <td>Prabowo Subianto korupsi proyek pengadaan Kapa...</td>
+      <td>DKI Jakarta</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-99409304-bb16-45ea-9a7e-77a12ba79e87')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7e1ca636-5d70-485e-b930-9bf695a9818b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -652,12 +657,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-99409304-bb16-45ea-9a7e-77a12ba79e87 button.colab-df-convert');
+          document.querySelector('#df-7e1ca636-5d70-485e-b930-9bf695a9818b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-99409304-bb16-45ea-9a7e-77a12ba79e87');
+          const element = document.querySelector('#df-7e1ca636-5d70-485e-b930-9bf695a9818b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -707,7 +712,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d1502eb7-4c1e-4de6-8a7d-d3d489c77cc4">
+  <div id="df-56697b4c-db6b-4a8b-a89f-34cc71caccc2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -734,58 +739,58 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   <tbody>
     <tr>
       <th>0</th>
+      <td>Arus Mudik Lebaran 2023, Korlantas Perpanjang ...</td>
+      <td>Korlantas memperpanjang kebijakan One Way di T...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Top 3 Nasional: Jalan Arteri Macet Imbas Mudik...</td>
+      <td>Berbagai peristiwa kemarin terjadi di Tanah Ai...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ketua KPK Firli Bahuri Temui Kapolri di Tengah...</td>
+      <td>Ketua KPK Firli Bahuri menemui Kapolri Jendera...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ada Koalisi Besar, Demokrat Sebut Koalisi Peru...</td>
+      <td>Sekjen DPP Partai Demokrat Teuku Riefky Harsya...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Koalisi Masyarakat Sipil Minta Jokowi Hentikan...</td>
+      <td>Peningkatan status di Papua ini dilakukan sete...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>KontraS Papua Ungkap 4 Warga Sipil Tewas Akiba...</td>
+      <td>Samuel Awom mengatakan saat ini sudah ada empa...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Jalan Tol Mudik Lebaran 2023 Satu Arah Berdamp...</td>
+      <td>Kebijakan lalu lintas satu arah atau one way s...</td>
+    </tr>
+    <tr>
+      <th>7</th>
       <td>Partai Prima Tuding KPU Tak Adil soal Verifika...</td>
       <td>Ketua KPU Hasyim Asy'ari menjawab tudingan Par...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>8</th>
       <td>Kasus Suap Jalur Kereta Api, KPK Sita Uang Pul...</td>
       <td>KPK menggeledah empat lokasi dalam kaitan kasu...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>9</th>
       <td>Kenapa Konferensi Asia Afrika Digelar 18-23 Ap...</td>
       <td>Konferensi Asia Afrika, yang awalnya diprediks...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Koalisi Kebangsaan Gelar Pertemuan Besar 5 Par...</td>
-      <td>Yandri Susanto mengatakan usai lebaran akan ad...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Posko Mudik BPJS Kesehatan Gandeng Tuna Netra</td>
-      <td>Syamsul Rijal dan Basri Maksud merasa bangga d...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Mengenang 68 Tahun Sejarah Konferensi Asia Afr...</td>
-      <td>Konferensi Asia Afrika 1955 menghasilkan keput...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>PAN: PDIP Mesti Ikuti Musyawarah soal Capres b...</td>
-      <td>Waketum PAN Yandri Susanto mengatakan bila PDI...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Partai Prima Bakal Kasasi Putusan Pengadilan T...</td>
-      <td>Partai Prima Agus Jabo Priyono menyiapkan dua ...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>PDIP Mulai Jajaki Pembentukan Koalisi Setelah ...</td>
-      <td>Hasto Kristiyanto mengatakan PDIP bakal mulai ...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Lestari: Antisipasi Merebaknya Covid-19 di Neg...</td>
-      <td>Kementerian Kesehatan Singapura menuturkan bah...</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d1502eb7-4c1e-4de6-8a7d-d3d489c77cc4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-56697b4c-db6b-4a8b-a89f-34cc71caccc2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -836,12 +841,12 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d1502eb7-4c1e-4de6-8a7d-d3d489c77cc4 button.colab-df-convert');
+          document.querySelector('#df-56697b4c-db6b-4a8b-a89f-34cc71caccc2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d1502eb7-4c1e-4de6-8a7d-d3d489c77cc4');
+          const element = document.querySelector('#df-56697b4c-db6b-4a8b-a89f-34cc71caccc2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -972,62 +977,67 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 <span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">                 method,</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2">                     # Python 3 (including for exceptions like SystemExit).</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">                     # Otherwise it looks like a bug in the code.</span>
-<span class="ne">--&gt; </span><span class="mi">449</span><span class="s2">                     six.raise_from(e, None)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span><span class="s2">         except (SocketTimeout, BaseSSLError, SocketError) as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">384</span><span class="s2">         # Trigger any extra validation we need to do.</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">386</span><span class="s2">             self._validate_conn(conn)</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span><span class="s2">         except (SocketTimeout, BaseSSLError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span><span class="s2">             # Py2 raises this as a BaseSSLError, Py3 raises it as socket timeout.</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span><span class="s2">         # Force connect early to allow us to validate the connection.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span><span class="s2">         if not getattr(conn, &quot;sock&quot;, None):  # AppEngine might not have  `.sock`</span>
+<span class="ne">-&gt; </span><span class="mi">1042</span><span class="s2">             conn.connect()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1044</span><span class="s2">         if not conn.is_verified:</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="s2">                 # Python 3</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span><span class="s2">                 try:</span>
-<span class="ne">--&gt; </span><span class="mi">444</span><span class="s2">                     httplib_response = conn.getresponse()</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span><span class="s2">                 except BaseException as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span><span class="s2">                     # Remove the TypeError from the exception chain in</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/snscrape/base.py</span> in <span class="ni">connect</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="s2"> class _HTTPSConnection(urllib3.connection.HTTPSConnection):</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span><span class="s2">         def connect(self, *args, **kwargs):</span>
+<span class="ne">--&gt; </span><span class="mi">141</span><span class="s2">                 conn = super().connect(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span><span class="s2">                 #FIXME: Uses undocumented attribute self.sock and beyond.</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span><span class="s2">                 try:</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             try:</span>
-<span class="ne">-&gt; </span><span class="mi">1377</span><span class="s2">                 response.begin()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span><span class="s2">             except ConnectionError:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1379</span><span class="s2">                 self.close()</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">417</span><span class="s2">             context.load_default_certs()</span>
+<span class="g g-Whitespace">    </span><span class="mi">418</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">419</span><span class="s2">         self.sock = ssl_wrap_socket(</span>
+<span class="g g-Whitespace">    </span><span class="mi">420</span><span class="s2">             sock=conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">421</span><span class="s2">             keyfile=self.key_file,</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span><span class="s2">         # read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">         while True:</span>
-<span class="ne">--&gt; </span><span class="mi">320</span><span class="s2">             version, status, reason = self._read_status()</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span><span class="s2">             if status != CONTINUE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span><span class="s2">                 break</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py</span> in <span class="ni">ssl_wrap_socket</span><span class="nt">(sock, keyfile, certfile, cert_reqs, ca_certs, server_hostname, ssl_version, ciphers, ssl_context, ca_cert_dir, key_password, ca_cert_data, tls_in_tls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">     if send_sni:</span>
+<span class="ne">--&gt; </span><span class="mi">449</span><span class="s2">         ssl_sock = _ssl_wrap_socket_impl(</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span><span class="s2">             sock, context, tls_in_tls, server_hostname=server_hostname</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span><span class="s2">         )</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">     def _read_status(self):</span>
-<span class="ne">--&gt; </span><span class="mi">281</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py</span> in <span class="ni">_ssl_wrap_socket_impl</span><span class="nt">(sock, ssl_context, tls_in_tls, server_hostname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span><span class="s2">     if server_hostname:</span>
+<span class="ne">--&gt; </span><span class="mi">493</span><span class="s2">         return ssl_context.wrap_socket(sock, server_hostname=server_hostname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span><span class="s2">     else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span><span class="s2">         return ssl_context.wrap_socket(sock)</span>
 
-<span class="nn">/usr/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         while True:</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">             try:</span>
-<span class="ne">--&gt; </span><span class="mi">704</span><span class="s2">                 return self._sock.recv_into(b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">             except timeout:</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="s2">                 self._timeout_occurred = True</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">wrap_socket</span><span class="nt">(self, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, session)</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span><span class="s2">         # SSLSocket class handles server_hostname encoding before it calls</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span><span class="s2">         # ctx._wrap_socket()</span>
+<span class="ne">--&gt; </span><span class="mi">501</span><span class="s2">         return self.sslsocket_class._create(</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span><span class="s2">             sock=sock,</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span><span class="s2">             server_side=server_side,</span>
 
-<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1240</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
-<span class="g g-Whitespace">   </span><span class="mi">1241</span><span class="s2">                   self.__class__)</span>
-<span class="ne">-&gt; </span><span class="mi">1242</span><span class="s2">             return self.read(nbytes, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1243</span><span class="s2">         else:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1244</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">_create</span><span class="nt">(cls, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, context, session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span><span class="s2">                         # non-blocking</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span><span class="s2">                         raise ValueError(&quot;do_handshake_on_connect should not be specified for non-blocking sockets&quot;)</span>
+<span class="ne">-&gt; </span><span class="mi">1041</span><span class="s2">                     self.do_handshake()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span><span class="s2">             except (OSError, ValueError):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span><span class="s2">                 self.close()</span>
 
-<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1099</span><span class="s2">             if buffer is not None:</span>
-<span class="ne">-&gt; </span><span class="mi">1100</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1101</span><span class="s2">             else:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1102</span><span class="s2">                 return self._sslobj.read(len)</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">do_handshake</span><span class="nt">(self, block)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1308</span><span class="s2">             if timeout == 0.0 and block:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1309</span><span class="s2">                 self.settimeout(None)</span>
+<span class="ne">-&gt; </span><span class="mi">1310</span><span class="s2">             self._sslobj.do_handshake()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1311</span><span class="s2">         finally:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1312</span><span class="s2">             self.settimeout(timeout)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -9469,23 +9479,9 @@ p = banyaknya data yang masuk</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1dedbf444ec7d5a0cc90cb93f54064bfa090b45ae446d145eea65c81ce38b6f8.png" src="_images/1dedbf444ec7d5a0cc90cb93f54064bfa090b45ae446d145eea65c81ce38b6f8.png" />
+<img alt="_images/04d9344b0d819fe0529a51c9b5e58161c09a262fa13b2f83ccc00433d1fe8721.png" src="_images/04d9344b0d819fe0529a51c9b5e58161c09a262fa13b2f83ccc00433d1fe8721.png" />
 </div>
 </div>
-<p><strong>Matriks Adjasensi</strong>
-Matriks adjasensi yang merepresentasikan hubungan antara setiap node.</p>
-<p>\begin{array}{ccc}
-&amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9\
-1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\
-2 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0\
-3 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0\
-4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\
-5 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\
-6 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\
-7 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\
-8 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\
-9 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\
-\end{array}</p>
 <p>Dalam rumus PageRank, terdapat dua parameter penting: damping factor (d) dan jumlah total simpul (N). Untuk kasus ini, kita akan menggunakan d = 0,85 dan N = 9.</p>
 <p>Vektor PageRank awal adalah vektor yang menunjukkan probabilitas awal bahwa pengguna berada di setiap simpul. Untuk tujuan ini, kita dapat menginisialisasi setiap elemen vektor dengan nilai yang sama, seperti 1/n, di mana n adalah jumlah simpul.</p>
 <p>PR(1) = PR(2) = PR(3) = PR(4) = PR(5) = PR(6) = PR(7) = PR(8) = PR(9) = 1/9 = 0.1111</p>
@@ -9500,55 +9496,22 @@ Matriks adjasensi yang merepresentasikan hubungan antara setiap node.</p>
 <li><p>C(T1), C(T2), …, C(Tn) adalah jumlah tautan keluar dari setiap node T1, T2, …, Tn</p></li>
 <li><p>PR(T1), PR(T2), …, PR(Tn) adalah nilai PageRank untuk setiap node T1, T2, …, Tn</p></li>
 </ul>
-<p>Iterasi 0:</p>
-<p>PR(1) = PR(2) = PR(3) = PR(4) = PR(5) = PR(6) = PR(7) = PR(8) = PR(9) = 1/9</p>
+</div>
+<div class="section" id="iterasi-0">
+<h3>Iterasi 0:<a class="headerlink" href="#iterasi-0" title="Permalink to this heading">#</a></h3>
+<p>PR(1) = PR(2) = PR(3) = PR(4) = PR(5) = PR(6) = PR(7) = PR(8) = PR(9) = <span class="math notranslate nohighlight">\(\frac{1-0,85}{9}=0.01666666666666667\)</span></p>
 </div>
 <div class="section" id="iterasi-1">
 <h3>Iterasi 1:<a class="headerlink" href="#iterasi-1" title="Permalink to this heading">#</a></h3>
-<p>PR(1) = (1-0.85)/9 + 0.85 * ((PR(2)/2 + PR(3)/2 + PR(4)/1)/3) = 0.064 + 0.242 = 0.306</p>
-<p>PR(2) = (1-0.85)/9 + 0.85 * ((PR(5)/2 + PR(6)/2)/2) = 0.064 + 0.191 = 0.255</p>
-<p>PR(3) = (1-0.85)/9 + 0.85 * ((PR(5)/2 + PR(6)/2)/2) = 0.064 + 0.191 = 0.255</p>
-<p>PR(4) = (1-0.85)/9 + 0.85 * (PR(6)/1) = 0.064 + 0.242 = 0.306</p>
-<p>PR(5) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/2 + (PR(8)/1)/2) = 0.064 + 0.191 = 0.255</p>
-<p>PR(6) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/2 + (PR(8)/1)/2) = 0.064 + 0.191 = 0.255</p>
-<p>PR(7) = (1-0.85)/9 + 0.85 * ((PR(5)/1)/1 + (PR(6)/1)/1 + (PR(9)/1)/1) = 0.064 + 0.332 = 0.396</p>
-<p>PR(8) = (1-0.85)/9 + 0.85 * (PR(7)/1) = 0.064 + 0.242 = 0.306</p>
-<p>PR(9) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/1) = 0.064 + 0.191 = 0.255</p>
-</div>
-<div class="section" id="iterasi-2">
-<h3>Iterasi 2:<a class="headerlink" href="#iterasi-2" title="Permalink to this heading">#</a></h3>
-<p>PR(1) = (1-0.85)/9 + 0.85 * ((PR(2)/2 + PR(3)/2 + PR(4)/1)/3) = 0.022 + 0.256 = 0.278</p>
-<p>PR(2) = (1-0.85)/9 + 0.85 * ((PR(5)/2 + PR(6)/2)/2) = 0.022 + 0.204 = 0.226</p>
-<p>PR(3) = (1-0.85)/9 + 0.85 * ((PR(5)/2 + PR(6)/2)/2) = 0.022 + 0.204 = 0.226</p>
-<p>PR(4) = (1-0.85)/9 + 0.85 * (PR(6)/1) = 0.022 + 0.278 = 0.3</p>
-<p>PR(5) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/2 + (PR(8)/1)/2) = 0.022 + 0.204 = 0.226</p>
-<p>PR(6) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/2 + (PR(8)/1)/2) = 0.022 + 0.204 = 0.226</p>
-<p>PR(7) = (1-0.85)/9 + 0.85 * (PR(9)/1 + (PR(5)/1)/1 + (PR(6)/1)/1) = 0.022 + 0.338 = 0.36</p>
-<p>PR(8) = (1-0.85)/9 + 0.85 * (PR(7)/1) = 0.022 + 0.278 = 0.3</p>
-<p>PR(9) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/1) = 0.022 + 0.204 = 0.226</p>
-</div>
-<div class="section" id="iterasi-3">
-<h3>Iterasi 3:<a class="headerlink" href="#iterasi-3" title="Permalink to this heading">#</a></h3>
-<p>PR(1) = (1-0.85)/9 + 0.85 * ((PR(2)/2 + PR(3)/2 + PR(4)/1)/3) = 0.014 + 0.241 = 0.255</p>
-<p>PR(2) = (1-0.85)/9 + 0.85 * ((PR(5)/2 + PR(6)/2)/2) = 0.014 + 0.182 = 0.196</p>
-<p>PR(3) = (1-0.85)/9 + 0.85 * ((PR(5)/2 + PR(6)/2)/2) = 0.014 + 0.182 = 0.196</p>
-<p>PR(4) = (1-0.85)/9 + 0.85 * (PR(6)/1) = 0.014 + 0.297 = 0.311</p>
-<p>PR(5) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/2 + (PR(8)/1)/2) = 0.014 + 0.196 = 0.21</p>
-<p>PR(6) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/2 + (PR(8)/1)/2) = 0.014 + 0.196 = 0.21</p>
-<p>PR(7) = (1-0.85)/9 + 0.85 * (PR(9)/1 + (PR(5)/1)/1 + (PR(6)/1)/1) = 0.014 + 0.342 = 0.356</p>
-<p>PR(8) = (1-0.85)/9 + 0.85 * (PR(7)/1) = 0.014 + 0.305 = 0.319</p>
-<p>PR(9) = (1-0.85)/9 + 0.85 * ((PR(7)/1)/1) = 0.014 + 0.21 = 0.224</p>
-<div class="section" id="id1">
-<h4>PageRank<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
-<p>PR(1) = 0.255</p>
-<p>PR(2) = 0.196</p>
-<p>PR(3) = 0.196</p>
-<p>PR(4) = 0.311</p>
-<p>PR(5) = 0.21</p>
-<p>PR(6) = 0.21</p>
-<p>PR(7) = 0.356</p>
-<p>PR(8) = 0.319</p>
-<p>PR(9) = 0.224</p>
+<p><span class="math notranslate nohighlight">\(PR(1) = \frac{1-0,85}{9} +0.85 * (0) = 0.01666666666666667\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P2) = \frac{(1-d)}{N} + d * \frac{((PR(Prev P1))}{(|out P1|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{3} = 0.021388888888888895\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P3) = \frac{(1-d)}{N} * \frac{((PR(Prev P1))}{(|out P1|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{3} = 0.021388888888888895\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P4) = \frac{(1-d)}{N} * \frac{((PR(Prev P1))}{(|out P1|))} = \frac{(1-0.85)}{9} + 0.85 * {0.01666666666666667}{3} = 0.021388888888888895\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P5) = \frac{(1-d)}{N} * \frac{((PR(Prev P2))}{(|out P2|)}+(\frac{PR(Prev P3))}{(|out P3|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{2}+  \frac{0.01666666666666667}{2} = 0.03083333695\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P6) = \frac{(1-d)}{N} * \frac{((PR(Prev P2))}{(|out P2|)}+  \frac{PR(Prev P3)}{(|out P3|)}+  \frac{(PR(Prev P4))}{(|out P4|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{2}+  \frac{0.01666666666666667}{2}+  \frac{0.01666666666666667}{1} = 0.0450000039\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P7) = \frac{(1-d)}{N} * \frac{((PR(Prev P5))}{(|out P5|)}+  (\frac{PR(Prev P6))}{(|out P6|)}+  \frac{(PR(Prev P9))}{(|out P9|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{1}+  \frac{0.01666666666666667}{1}+  \frac{0.01666666666666667}{1} = 0.05916666785\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P8) = \frac{(1-d)}{N} * \frac{((PR(Prev P7))}{(|out P7|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{1} = 0.03083333362\)</span></p>
+<p><span class="math notranslate nohighlight">\(PR(P9) = \frac{(1-d)}{N} * \frac{((PR(Prev P8))}{(|out P7|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{1} = 0.03083333362\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inisialisasi nilai pagerank awal</span>
@@ -9558,7 +9521,7 @@ Matriks adjasensi yang merepresentasikan hubungan antara setiap node.</p>
 <span class="n">d</span> <span class="o">=</span> <span class="mf">0.85</span>
 
 <span class="c1"># iterasi hingga konvergen</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
     <span class="n">pagerank_new</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
         <span class="n">pr</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="p">)</span> <span class="c1"># nilai awal pagerank</span>
@@ -9581,11 +9544,10 @@ Node 3: 0.021388888888888895
 Node 4: 0.021388888888888895
 Node 5: 0.03484722222222223
 Node 6: 0.05302777777777779
-Node 7: 0.30359673959384764
-Node 8: 0.2561302015781467
-Node 9: 0.27156472549467225
+Node 7: 0.3046809195053111
+Node 8: 0.2756454399844893
+Node 9: 0.2509653071768661
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -10610,12 +10572,8 @@ hoped that he had forgotten his anger by then.
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-8-graph">[Tugas 8] GRAPH</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank">PageRank</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pagerank-berarah">PAGERANK BERARAH</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-0">Iterasi 0:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-1">Iterasi 1:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-2">Iterasi 2:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-3">Iterasi 3:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">PageRank</a></li>
-</ul>
-</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extractive-summarizer">EXTRACTIVE SUMMARIZER</a></li>
 </ul>
 </li>
