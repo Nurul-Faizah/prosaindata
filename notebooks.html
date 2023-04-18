@@ -444,26 +444,19 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
-  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 kB</span> <span class=" -Color -Color-Red">2.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
+Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.2.20230320)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
 Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.11.0)
+Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
-Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
-Successfully installed snscrape-0.6.2.20230320
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
+Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
 </div>
@@ -504,8 +497,8 @@ Successfully installed snscrape-0.6.2.20230320
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "74c71053beca437a98d996811b6b4530"}</script><div class="output text_html">
-  <div id="df-7e1ca636-5d70-485e-b930-9bf695a9818b">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "898cc601683940efbb29730b32fda348"}</script><div class="output text_html">
+  <div id="df-3c08400e-847f-4282-8cf3-3153b676f9ef">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -606,7 +599,7 @@ Successfully installed snscrape-0.6.2.20230320
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7e1ca636-5d70-485e-b930-9bf695a9818b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3c08400e-847f-4282-8cf3-3153b676f9ef')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -657,12 +650,12 @@ Successfully installed snscrape-0.6.2.20230320
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7e1ca636-5d70-485e-b930-9bf695a9818b button.colab-df-convert');
+          document.querySelector('#df-3c08400e-847f-4282-8cf3-3153b676f9ef button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7e1ca636-5d70-485e-b930-9bf695a9818b');
+          const element = document.querySelector('#df-3c08400e-847f-4282-8cf3-3153b676f9ef');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -712,7 +705,7 @@ Successfully installed snscrape-0.6.2.20230320
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-56697b4c-db6b-4a8b-a89f-34cc71caccc2">
+  <div id="df-309bd3a9-6434-4a57-ae6d-537aa40c14f8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -739,58 +732,58 @@ Successfully installed snscrape-0.6.2.20230320
   <tbody>
     <tr>
       <th>0</th>
+      <td>Penjelasan Panglima TNI Soal Siaga Tempur di P...</td>
+      <td>Panglima TNI menyatakan status siaga tempur di...</td>
+    </tr>
+    <tr>
+      <th>1</th>
       <td>Arus Mudik Lebaran 2023, Korlantas Perpanjang ...</td>
       <td>Korlantas memperpanjang kebijakan One Way di T...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>2</th>
       <td>Top 3 Nasional: Jalan Arteri Macet Imbas Mudik...</td>
       <td>Berbagai peristiwa kemarin terjadi di Tanah Ai...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>3</th>
       <td>Ketua KPK Firli Bahuri Temui Kapolri di Tengah...</td>
       <td>Ketua KPK Firli Bahuri menemui Kapolri Jendera...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>Ada Koalisi Besar, Demokrat Sebut Koalisi Peru...</td>
       <td>Sekjen DPP Partai Demokrat Teuku Riefky Harsya...</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>Koalisi Masyarakat Sipil Minta Jokowi Hentikan...</td>
       <td>Peningkatan status di Papua ini dilakukan sete...</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>6</th>
       <td>KontraS Papua Ungkap 4 Warga Sipil Tewas Akiba...</td>
       <td>Samuel Awom mengatakan saat ini sudah ada empa...</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>Jalan Tol Mudik Lebaran 2023 Satu Arah Berdamp...</td>
       <td>Kebijakan lalu lintas satu arah atau one way s...</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>Partai Prima Tuding KPU Tak Adil soal Verifika...</td>
       <td>Ketua KPU Hasyim Asy'ari menjawab tudingan Par...</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>Kasus Suap Jalur Kereta Api, KPK Sita Uang Pul...</td>
       <td>KPK menggeledah empat lokasi dalam kaitan kasu...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Kenapa Konferensi Asia Afrika Digelar 18-23 Ap...</td>
-      <td>Konferensi Asia Afrika, yang awalnya diprediks...</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-56697b4c-db6b-4a8b-a89f-34cc71caccc2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-309bd3a9-6434-4a57-ae6d-537aa40c14f8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -841,12 +834,12 @@ Successfully installed snscrape-0.6.2.20230320
 
       <script>
         const buttonEl =
-          document.querySelector('#df-56697b4c-db6b-4a8b-a89f-34cc71caccc2 button.colab-df-convert');
+          document.querySelector('#df-309bd3a9-6434-4a57-ae6d-537aa40c14f8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-56697b4c-db6b-4a8b-a89f-34cc71caccc2');
+          const element = document.querySelector('#df-309bd3a9-6434-4a57-ae6d-537aa40c14f8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -9512,6 +9505,7 @@ p = banyaknya data yang masuk</p>
 <p><span class="math notranslate nohighlight">\(PR(P7) = \frac{(1-d)}{N} * \frac{((PR(Prev P5))}{(|out P5|)}+  (\frac{PR(Prev P6))}{(|out P6|)}+  \frac{(PR(Prev P9))}{(|out P9|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{1}+  \frac{0.01666666666666667}{1}+  \frac{0.01666666666666667}{1} = 0.05916666785\)</span></p>
 <p><span class="math notranslate nohighlight">\(PR(P8) = \frac{(1-d)}{N} * \frac{((PR(Prev P7))}{(|out P7|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{1} = 0.03083333362\)</span></p>
 <p><span class="math notranslate nohighlight">\(PR(P9) = \frac{(1-d)}{N} * \frac{((PR(Prev P8))}{(|out P7|))} = \frac{(1-0.85)}{9} + 0.85 * \frac{0.01666666666666667}{1} = 0.03083333362\)</span></p>
+<p>Perhitungan : <a class="reference external" href="https://docs.google.com/spreadsheets/d/1jh6Y_6ebbKoGnYoZUw06y4ZQNp8vYeBu/edit?usp=share_link&amp;amp;ouid=104366477487099693214&amp;amp;rtpof=true&amp;amp;sd=true">https://docs.google.com/spreadsheets/d/1jh6Y_6ebbKoGnYoZUw06y4ZQNp8vYeBu/edit?usp=share_link&amp;ouid=104366477487099693214&amp;rtpof=true&amp;sd=true</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inisialisasi nilai pagerank awal</span>
