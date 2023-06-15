@@ -1,0 +1,67 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import csv
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://finance.yahoo.com/quote/PGEO.JK?p=PGEO.JK&.tsrc=fin-srch"
+
+# Send a GET request to the URL and retrieve the HTML content
+response = requests.get(url)
+html_content = response.text
+
+# Parse the HTML content using Beautiful Soup
+soup = BeautifulSoup(html_content, "html.parser")
+
+# Find the table containing the time series data
+table = soup.find("table", {"data-test": "historical-prices"})
+
+# Find all rows in the table (excluding the header row)
+rows = table.find_all("div")
+
+# Create a CSV file and write the header
+csv_filename = "time_series_data.csv"
+with open(csv_filename, "w", newline="") as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(["Date", "Open Price", "High Price", "Low Price", "Close Price", "Adj Close Price", "Volume"])
+
+    # Iterate over each row and extract the data
+    for row in rows:
+        columns = row.find_all(class : class="Pos(r) Z(3) D(ib) H($fullChartIQHeight) Ov(h) Miw(728px)!--tab768  W($fullChartIQXpdLWidth)--xlg W($fullChartIQXpdWidth) Miw(785px) chartiq-container stx-crosshair-on stx-draggable")
+        date = columns[0].text
+        open_price = columns[1].text
+        high_price = columns[2].text
+        low_price = columns[3].text
+        close_price = columns[4].text
+        adj_close_price = columns[5].text
+        volume = columns[6].text
+
+        # Write the data to the CSV file
+        writer.writerow([date, open_price, high_price, low_price, close_price, adj_close_price, volume])
+
+print("Data saved to", csv_filename)
+
+------------------
+
+
+[0;36m  File [0;32m"<ipython-input-1-244b3ff06570>"[0;36m, line [0;32m28[0m
+[0;31m    columns = row.find_all(class : class="Pos(r) Z(3) D(ib) H($fullChartIQHeight) Ov(h) Miw(728px)!--tab768  W($fullChartIQXpdLWidth)--xlg W($fullChartIQXpdWidth) Miw(785px) chartiq-container stx-crosshair-on stx-draggable")[0m
+[0m                           ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+
